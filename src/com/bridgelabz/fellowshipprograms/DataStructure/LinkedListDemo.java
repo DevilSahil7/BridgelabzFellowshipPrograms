@@ -47,7 +47,7 @@ public class LinkedListDemo {
 			System.out.println(key+ " found and deleted!");
 			return list;
 		}
-		while(currentNode!=null && (currentNode.data).equ)
+		while(currentNode!=null && currentNode.data!=key)
 		{
 			prev= currentNode;
 			currentNode=currentNode.next;

@@ -375,6 +375,23 @@ public class Utility {
 		}
 		return -1;
 	}
+	
+	public static <T extends Comparable<T>> int binarySearchGeneric(T arr[],int low, int high, T key) {
+		
+		if(high>=low) {
+			int mid= low+(high-low)/2;
+			if(arr[mid].compareTo(key)==0) 
+				return mid;
+			if(arr[mid].compareTo(key)>0)
+				return binarySearchGeneric(arr, low, mid-1, key);
+			if(arr[mid].compareTo(key)<0)
+				return binarySearchGeneric(arr, mid+1, high, key);
+					
+				
+			}
+		return -1;
+
+	}
 
 	public static void insertionSort(int arr[]) {
 		int temp, j;
@@ -408,6 +425,22 @@ public class Utility {
 			System.out.print(arr[i] + " ");
 		}
 		System.out.println();
+	}
+	
+	public static <T extends Comparable<T>> T[] bubbleSortGeneric(T[]arr) {
+		T temp;
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = i+1; j < arr.length; j++) {
+				if(arr[i].compareTo(arr[j])>=0) {
+					temp=arr[i];
+					arr[i]=arr[j];
+					arr[j]=temp;
+				}
+				
+			}
+			
+		}
+		return arr;
 	}
 
 	public static void anagram(String str1, String str2) {
