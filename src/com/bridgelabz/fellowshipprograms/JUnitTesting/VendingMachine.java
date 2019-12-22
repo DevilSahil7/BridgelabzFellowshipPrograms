@@ -2,6 +2,12 @@ package com.bridgelabz.fellowshipprograms.JUnitTesting;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: fewest notes to be returned by vending machine
+ * 
+ * @author sahil
+ *
+ */
 public class VendingMachine {
 
 	public static void yourChoice(int choice, int quantity) {

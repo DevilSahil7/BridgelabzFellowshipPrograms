@@ -2,6 +2,12 @@ package com.bridgelabz.fellowshipprograms.JUnitTesting;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: to find day of week
+ * 
+ * @author sahil
+ *
+ */
 public class DayOfWeek {
 
 	public static void main(String[] args) {

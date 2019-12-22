@@ -2,6 +2,12 @@ package com.bridgelabz.fellowshipprograms.LogicalPrograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: gambler program to initiate bets, trials and to set the probability of winning and loosing
+ * 
+ * @author sahil
+ *
+ */
 public class Gambler {
 
 	public static void main(String[] args) {

@@ -2,6 +2,12 @@ package com.bridgelabz.fellowshipprograms.FunctionalPrograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: to find the root of the equation
+ * 
+ * @author sahil
+ *
+ */
 public class Quadratic {
 
 	public static void main(String[] args) {

@@ -2,6 +2,12 @@ package com.bridgelabz.fellowshipprograms.BasicPrograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: replacing usser's name in a message
+ * 
+ * @author sahil
+ *
+ */
 public class HelloUser {
 
 	public static void main(String[] args) {

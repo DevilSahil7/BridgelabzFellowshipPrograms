@@ -5,6 +5,14 @@ import java.util.LinkedList;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: reading the integer file from system and making it as ordered list by sorting
+ * 
+ * purpose: 
+ * 
+ * @author sahil
+ *
+ */
 public class OrderedList {
 
 	public static void main(String[] args) throws IOException {

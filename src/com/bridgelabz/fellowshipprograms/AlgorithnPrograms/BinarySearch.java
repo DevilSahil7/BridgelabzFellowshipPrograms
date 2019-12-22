@@ -2,6 +2,12 @@ package com.bridgelabz.fellowshipprograms.AlgorithnPrograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: to find a word in list using binary search
+ * 
+ * @author sahil
+ *
+ */
 public class BinarySearch {
 
 	public static void main(String[] args) {

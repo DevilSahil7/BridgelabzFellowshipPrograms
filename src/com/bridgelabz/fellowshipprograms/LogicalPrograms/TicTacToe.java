@@ -2,6 +2,12 @@ package com.bridgelabz.fellowshipprograms.LogicalPrograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: tic tac toe game of two players
+ * 
+ * @author sahil
+ *
+ */
 public class TicTacToe {
 	public static final int X = 1, O = -1;
 	public static final int EMPTY = 0;

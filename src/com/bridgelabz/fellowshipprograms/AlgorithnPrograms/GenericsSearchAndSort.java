@@ -4,6 +4,12 @@ import java.util.ArrayList;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: performing sorting and searching using generics
+ * 
+ * @author sahil
+ *
+ */
 public class GenericsSearchAndSort {
 	public static void search(String s, String f) {
 		String a[] = s.split(" ");

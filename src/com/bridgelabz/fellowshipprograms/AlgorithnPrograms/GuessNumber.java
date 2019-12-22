@@ -2,6 +2,12 @@ package com.bridgelabz.fellowshipprograms.AlgorithnPrograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: guessing the user's number
+ * 
+ * @author sahil
+ *
+ */
 public class GuessNumber {
 
 	public static void main(String[] args) {

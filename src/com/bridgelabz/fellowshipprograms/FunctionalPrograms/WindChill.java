@@ -2,6 +2,12 @@ package com.bridgelabz.fellowshipprograms.FunctionalPrograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: to find the windchill
+ * 
+ * @author sahil
+ *
+ */
 public class WindChill {
 
 	public static void main(String[] args) {

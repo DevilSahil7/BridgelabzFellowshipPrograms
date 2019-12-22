@@ -2,6 +2,12 @@ package com.bridgelabz.fellowshipprograms.BasicPrograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: to find probability if heads and tails after flipping a coin by users choice
+ * 
+ * @author sahil
+ *
+ */
 public class FlipCoin {
 
 	public static void main(String[] args) {

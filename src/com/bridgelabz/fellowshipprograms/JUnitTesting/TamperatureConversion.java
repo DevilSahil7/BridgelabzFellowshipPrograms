@@ -2,6 +2,12 @@ package com.bridgelabz.fellowshipprograms.JUnitTesting;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: to convert temperature from C to F and F to C
+ * 
+ * @author sahil
+ *
+ */
 public class TamperatureConversion {
 
 	public static void main(String[] args) {

@@ -2,6 +2,12 @@ package com.bridgelabz.fellowshipprograms.JUnitTesting;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: to calculate monthly payment
+ * 
+ * @author sahil
+ *
+ */
 public class MonthlyPayment {
 
 	public static void main(String[] args) {

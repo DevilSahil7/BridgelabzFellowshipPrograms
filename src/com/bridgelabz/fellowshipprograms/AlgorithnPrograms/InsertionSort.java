@@ -2,6 +2,12 @@ package com.bridgelabz.fellowshipprograms.AlgorithnPrograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: to perform insertion sort
+ * 
+ * @author sahil
+ *
+ */
 public class InsertionSort {
 
 	public static void main(String[] args) {

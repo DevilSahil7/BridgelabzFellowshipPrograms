@@ -2,6 +2,12 @@ package com.bridgelabz.fellowshipprograms.AlgorithnPrograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: to sort array
+ * 
+ * @author sahil
+ *
+ */
 public class BubbleSort {
 
 	public static void main(String[] args) {

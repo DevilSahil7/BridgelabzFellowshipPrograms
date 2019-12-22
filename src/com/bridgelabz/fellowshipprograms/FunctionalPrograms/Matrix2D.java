@@ -2,6 +2,12 @@ package com.bridgelabz.fellowshipprograms.FunctionalPrograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: taking input for 2D array and printing it on screen
+ * 
+ * @author sahil
+ *
+ */
 public class Matrix2D {
 
 	public static void main(String[] args) {

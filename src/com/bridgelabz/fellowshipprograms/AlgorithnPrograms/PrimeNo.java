@@ -4,6 +4,12 @@ import java.util.ArrayList;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: to find prime numbers between 0-1000 that are anagrams and palindromes
+ * 
+ * @author sahil
+ *
+ */
 public class PrimeNo {
 
 	public static void main(String[] args) {

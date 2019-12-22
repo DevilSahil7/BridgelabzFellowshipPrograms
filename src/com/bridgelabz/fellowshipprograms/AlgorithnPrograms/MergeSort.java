@@ -1,5 +1,11 @@
 package com.bridgelabz.fellowshipprograms.AlgorithnPrograms;
 
+/**
+ * purpose: to perform merge sort
+ * 
+ * @author sahil
+ *
+ */
 public class MergeSort {
 	int array[];
 	int mergeArray[];

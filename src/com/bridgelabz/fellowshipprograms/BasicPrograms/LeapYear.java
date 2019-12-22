@@ -2,6 +2,12 @@ package com.bridgelabz.fellowshipprograms.BasicPrograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: to find year is leap year or not
+ * 
+ * @author sahil
+ *
+ */
 public class LeapYear {
 
 	public static void main(String[] args) {

@@ -2,6 +2,12 @@ package com.bridgelabz.fellowshipprograms.JUnitTesting;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: to convert decimal number to binary
+ * 
+ * @author sahil
+ *
+ */
 public class DecimalToBinary {
 
 	public static void main(String[] args) {

@@ -3,6 +3,12 @@ package com.bridgelabz.fellowshipprograms.DataStructure;
 import com.bridgelabz.fellowshipprograms.utility.QueueUtility;
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: Check the string is palindrome or not using dequeue
+ * 
+ * @author sahil
+ *
+ */
 public class PalindromeChecker {
 
 	public static void main(String[] args) {

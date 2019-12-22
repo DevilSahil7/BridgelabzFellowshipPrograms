@@ -2,6 +2,12 @@ package com.bridgelabz.fellowshipprograms.FunctionalPrograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: find the sum of three integers in array whose addition is 0
+ * 
+ * @author sahil
+ *
+ */
 public class Triplet {
 
 	public static void main(String[] args) {

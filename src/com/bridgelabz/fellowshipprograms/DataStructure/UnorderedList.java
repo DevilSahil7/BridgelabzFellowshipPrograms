@@ -5,6 +5,12 @@ import java.util.LinkedList;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: read the file from system and arrange it as linked list
+ * 
+ * @author sahil
+ *
+ */
 public class UnorderedList {
 
 	public static void main(String[] args) throws IOException  {

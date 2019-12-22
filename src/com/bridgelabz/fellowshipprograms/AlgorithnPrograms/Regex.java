@@ -5,6 +5,12 @@ import java.util.regex.Pattern;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: customizing the message using regular expression
+ * 
+ * @author sahil
+ *
+ */
 public class Regex {
 
 	public static void main(String[] args) {

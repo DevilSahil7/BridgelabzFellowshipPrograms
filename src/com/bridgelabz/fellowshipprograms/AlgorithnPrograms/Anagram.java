@@ -2,6 +2,12 @@ package com.bridgelabz.fellowshipprograms.AlgorithnPrograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: to find number is anagram
+ * 
+ * @author sahil
+ *
+ */
 public class Anagram {
 
 	public static void main(String[] args) {
