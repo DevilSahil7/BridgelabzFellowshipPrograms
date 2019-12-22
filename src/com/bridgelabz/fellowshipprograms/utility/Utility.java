@@ -2,6 +2,7 @@ package com.bridgelabz.fellowshipprograms.utility;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -30,25 +31,24 @@ public class Utility {
 		return sc.nextLong();
 	}
 
-	public static int[] count(int n) 	//to get the digits from number 
+	public static int[] count(int n) // to get the digits from number
 	{
-		int[] count = new int[10]; 		
+		int[] count = new int[10];
 		int temp = n;
 		while (temp != 0) {
-			int r = temp % 10; 	
-			count[r]++; 
-						
-			temp = temp / 10; 
-								
+			int r = temp % 10;
+			count[r]++;
+
+			temp = temp / 10;
+
 		}
-		return count; 					//count array to be stored in n1count
+		return count; // count array to be stored in n1count
 	}
 
-	public static boolean anagram(int n1, int n2) 
-	{
-		int[] n1count = count(n1); 		//generating digits from number
-									
-		int[] n2count = count(n2); 		//generating digits from number
+	public static boolean anagram(int n1, int n2) {
+		int[] n1count = count(n1); // generating digits from number
+
+		int[] n2count = count(n2); // generating digits from number
 		for (int i = 0; i < n2count.length; i++) {
 			if (n1count[i] != n2count[i]) {
 				return false;
@@ -77,7 +77,7 @@ public class Utility {
 		int flip = 1;
 
 		while (flip <= chance) {
-			if (Math.random() < 0.5) {   //half half possibility of both heads and tails
+			if (Math.random() < 0.5) { // half half possibility of both heads and tails
 				heads++;
 			} else
 				tails++;
@@ -94,7 +94,7 @@ public class Utility {
 			year = Utility.IntegerInput();
 			leapYear(year);
 		} else {
-			if (year % 100 == 0 || year % 400 == 0 || year % 4 == 0)		
+			if (year % 100 == 0 || year % 400 == 0 || year % 4 == 0)
 				System.out.println(year + " is leap year");
 			else
 				System.out.println(year + " is not leap year");
@@ -102,9 +102,9 @@ public class Utility {
 	}
 
 	public static void powerOfTwo(int power) {
-		if (power >= 0 && power <= 31) {				//integer value exceeds when power to the base 2 goes above 31
+		if (power >= 0 && power <= 31) { // integer value exceeds when power to the base 2 goes above 31
 			for (int i = 0; i < power; i++) {
-				int res = (int) Math.pow(2, i);			
+				int res = (int) Math.pow(2, i);
 				System.out.println("2^" + i + " is " + res);
 			}
 		} else {
@@ -137,15 +137,15 @@ public class Utility {
 		System.out.println("Enter elements in matrix: ");
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < cols; j++) {
-				arr[i][j] = Utility.IntegerInput();			//storing elements in matrix
+				arr[i][j] = Utility.IntegerInput(); // storing elements in matrix
 			}
 		}
 
 		// printing matrix in console
-		PrintWriter w = new PrintWriter(System.out);		//using PrintWriter to display matrix
+		PrintWriter w = new PrintWriter(System.out); // using PrintWriter to display matrix
 		for (int i = 0; i < rows; i++) {
 			for (int j = 0; j < cols; j++) {
-				w.print(arr[i][j] + " ");					
+				w.print(arr[i][j] + " ");
 			}
 			w.println();
 		}
@@ -153,7 +153,7 @@ public class Utility {
 		// writing matrix in external file
 		PrintWriter w1 = null;
 		try {
-			w1 = new PrintWriter(new File("D:\\matrixtext.txt"));  //writing matrix to the external file
+			w1 = new PrintWriter(new File("D:\\matrixtext.txt")); // writing matrix to the external file
 			for (int i = 0; i < rows; i++) {
 				for (int j = 0; j < cols; j++) {
 					w1.print(arr[i][j] + " ");
@@ -205,7 +205,7 @@ public class Utility {
 
 		for (int i = 0; i < trials; i++) {
 			int cash = stake;
-			while (cash > 0 && cash < goal) {		//cash should be greater than 0 and less than goal to play
+			while (cash > 0 && cash < goal) { // cash should be greater than 0 and less than goal to play
 				bets++;
 				if (Math.random() < 0.5)
 					cash++;
@@ -223,7 +223,7 @@ public class Utility {
 	public static void generateCoupon() {
 		int max = 1000000000;
 		char[] ch = "qwertyuiopasdfghjklzxcvbnm0123456789".toCharArray();
-		int random = (int) (Math.random() * max);    //generates random number
+		int random = (int) (Math.random() * max); // generates random number
 		StringBuilder sb = new StringBuilder();
 		while (random > 0) {
 			sb.append(ch[random % ch.length]);
@@ -238,11 +238,11 @@ public class Utility {
 		double start = 0, end = 0, play, stop;
 		System.out.println("Enter 1 to start");
 		play = Utility.doubleInput();
-		start = System.currentTimeMillis();			//gets the current time
+		start = System.currentTimeMillis(); // gets the current time
 		System.out.println("Enter 2 to stop");
 		stop = Utility.doubleInput();
-		end = System.currentTimeMillis();			//gets the current time
-		double result = (end - start) / 1000;		//gives the result of elapsed time
+		end = System.currentTimeMillis(); // gets the current time
+		double result = (end - start) / 1000; // gives the result of elapsed time
 		System.out.println(result + " seconds");
 	}
 
@@ -281,11 +281,11 @@ public class Utility {
 	public static void temperatureConversion(double temp, int choice) {
 		switch (choice) {
 		case 1:
-			double ctf = (temp * 9 / 5) + 32;					//celcius to fahrenheit conversion
+			double ctf = (temp * 9 / 5) + 32; // celcius to fahrenheit conversion
 			System.out.println(temp + " Celcius is " + ctf + " Fahrenheit.");
 			break;
 		case 2:
-			double ftc = (temp - 32) * 5 / 9;					//fahrenheit to celcius conversion
+			double ftc = (temp - 32) * 5 / 9; // fahrenheit to celcius conversion
 			System.out.println(temp + " Fahrenheit is " + ftc + " Celcius.");
 			break;
 		default:
@@ -314,23 +314,24 @@ public class Utility {
 		int arr[] = new int[8];
 		int i = 0;
 		while (num > 0) {
-			arr[i] = num % 2;					//storing 1 and 0 in array
-			num = num / 2;		
+			arr[i] = num % 2; // storing 1 and 0 in array
+			num = num / 2;
 			i++;
 		}
 		System.out.print("The binary is: ");
-		for (int j = i; j >= 0; j--) {				//reversing the array to print the correct binary output
+		for (int j = i; j >= 0; j--) { // reversing the array to print the correct binary output
 			System.out.print(arr[j]);
 		}
 		System.out.println();
 	}
 
 	public static void swapNibble(int num) {
-		int newNum = ((num & 0x0F) << 4 | (num & 0xF0) >> 4);	//using 0F to & whose value is 0000 1111 to preserve right side
-		System.out.println("New no is: " + newNum);				//bits and left shifting them by 4
-		toBinary(newNum);										//using F0 to & whose value is 1111 0000 to preserve left side
-		boolean status = false;									//bits and right shifting them by 4
-		for (int i = 0; i < 8; i++) {							//performing 'or' operation on both to merge the bits	
+		int newNum = ((num & 0x0F) << 4 | (num & 0xF0) >> 4); // using 0F to & whose value is 0000 1111 to preserve
+																// right side
+		System.out.println("New no is: " + newNum); // bits and left shifting them by 4
+		toBinary(newNum); // using F0 to & whose value is 1111 0000 to preserve left side
+		boolean status = false; // bits and right shifting them by 4
+		for (int i = 0; i < 8; i++) { // performing 'or' operation on both to merge the bits
 			if (newNum == Math.pow(2, i)) {
 				status = true;
 			}
@@ -365,7 +366,7 @@ public class Utility {
 		int left = 0, right = arr.length - 1;
 		while (left <= right) {
 			int mid = left + (right - left) / 2;
-			int res = key.compareTo(arr[mid]);	
+			int res = key.compareTo(arr[mid]);
 			if (res == 0)
 				return mid;
 			if (res < 0)
@@ -375,22 +376,39 @@ public class Utility {
 		}
 		return -1;
 	}
-	
-	public static <T extends Comparable<T>> int binarySearchGeneric(T arr[],int low, int high, T key) {
-		
-		if(high>=low) {
-			int mid= low+(high-low)/2;
-			if(arr[mid].compareTo(key)==0) 
+
+	public static <T extends Comparable<T>> int binarySearchGeneric(T arr[], int low, int high, T key) {
+		// using generics for binary search
+		if (high >= low) {
+			int mid = low + (high - low) / 2; // finding mid
+			if (arr[mid].compareTo(key) == 0)
 				return mid;
-			if(arr[mid].compareTo(key)>0)
-				return binarySearchGeneric(arr, low, mid-1, key);
-			if(arr[mid].compareTo(key)<0)
-				return binarySearchGeneric(arr, mid+1, high, key);
-					
-				
-			}
+			if (arr[mid].compareTo(key) > 0)
+				return binarySearchGeneric(arr, low, mid - 1, key);
+			if (arr[mid].compareTo(key) < 0)
+				return binarySearchGeneric(arr, mid + 1, high, key);
+
+		}
 		return -1;
 
+	}
+
+	public static int binarySearchInt(int arr[], int low, int high) {
+		if (high >= low) {
+			int mid = low + (high - low) / 2; // finding mid
+			System.out.println(arr[mid] + " is the number :");
+			System.out.println("if greater press t else f"); // asking user for correct answer
+			String key = stringInput();
+			if (key.equals("y"))
+				return mid;
+			else if (key.equals("t"))
+				return binarySearchInt(arr, mid + 1, high); // recursively calling binarySearchInt method
+			else if (key.equals("f"))
+				return binarySearchInt(arr, low, mid - 1);
+			else
+				return binarySearchInt(arr, low, high);
+		}
+		return -1;
 	}
 
 	public static void insertionSort(int arr[]) {
@@ -426,34 +444,48 @@ public class Utility {
 		}
 		System.out.println();
 	}
-	
-	public static <T extends Comparable<T>> T[] bubbleSortGeneric(T[]arr) {
+
+	public static void orderedLinkedList(LinkedList<Integer> ll) {
+		int temp = 0;
+
+		for (int i = 0; i < ll.size(); i++) {
+			for (int j = i + 1; j < ll.size(); j++) {
+				int a = ll.get(i);
+				int b = ll.get(j);
+				temp = a;
+				a = b;
+				b = temp;
+			}
+		}
+	}
+
+	public static <T extends Comparable<T>> T[] bubbleSortGeneric(T[] arr) {
 		T temp;
 		for (int i = 0; i < arr.length; i++) {
-			for (int j = i+1; j < arr.length; j++) {
-				if(arr[i].compareTo(arr[j])>=0) {
-					temp=arr[i];
-					arr[i]=arr[j];
-					arr[j]=temp;
+			for (int j = i + 1; j < arr.length; j++) {
+				if (arr[i].compareTo(arr[j]) >= 0) {
+					temp = arr[i];
+					arr[i] = arr[j];
+					arr[j] = temp;
 				}
-				
+
 			}
-			
+
 		}
 		return arr;
 	}
 
 	public static void anagram(String str1, String str2) {
-		char[] ch1 = str1.toCharArray();    		//converting string to char array
+		char[] ch1 = str1.toCharArray(); // converting string to char array
 		char[] ch2 = str2.toCharArray();
 		boolean status = false;
-		if (ch1.length != ch2.length) {				
+		if (ch1.length != ch2.length) {
 			status = false;
 		} else {
 			Arrays.sort(ch1);
 			Arrays.sort(ch2);
 			for (int i = 0; i < ch1.length; i++) {
-				if (ch1[i] == ch2[i])				//checking value of every index of both arrays
+				if (ch1[i] == ch2[i]) // checking value of every index of both arrays
 					status = true;
 				else
 					status = false;
@@ -475,9 +507,9 @@ public class Utility {
 					counter = counter + 1;
 			}
 			if (counter == 2)
-				al.add(i); 				// it will store all prime no is list al
+				al.add(i); // it will store all prime no is list al
 		}
-		return al;					 // it will return prime no list to main method
+		return al; // it will return prime no list to main method
 	}
 
 	public static int[] primeAnagram(ArrayList<Integer> al) {
@@ -485,17 +517,17 @@ public class Utility {
 		int arr[] = new int[170];
 		for (int i = 0; i < al.size(); i++) {
 			for (int j = i + 1; j < al.size(); j++) {
-				if (anagram(al.get(i), al.get(j))) 			// it will check anagram function
+				if (anagram(al.get(i), al.get(j))) // it will check anagram function
 				{
-					
-					arr[k] = al.get(i);						//stores first anagram number in array
-					k++;									//increments index of array
-					arr[k] = al.get(j);						//stores second anagram number in array
-					k++;									//increments index of array
+
+					arr[k] = al.get(i); // stores first anagram number in array
+					k++; // increments index of array
+					arr[k] = al.get(j); // stores second anagram number in array
+					k++; // increments index of array
 				}
 			}
 		}
-		return arr;											//returns array of prime anagrams
+		return arr; // returns array of prime anagrams
 	}
 
 	public static ArrayList<Integer> isPallindrome(ArrayList<Integer> a) {
@@ -511,30 +543,56 @@ public class Utility {
 			if (sum == n)
 				arr.add(sum);
 		}
-		return arr;
+		return arr; // returning array of palindrome numbers
 	}
 
 	public static LinkedList<String> readFile(String path) throws IOException {
 		LinkedList<String> ll = new LinkedList<String>();
 		File file = new File(path);
 		BufferedReader in = new BufferedReader(new FileReader(file));
-		String strwords[] = in.readLine().split(" ");			//storing file data in array
+		String strwords[] = in.readLine().split(" "); // storing file data in array
 		for (int i = 0; i < strwords.length; i++) {
-			ll.add(strwords[i]);								//adding array to ArrayList
+			ll.add(strwords[i]); // adding array to ArrayList
 		}
 		in.close();
-		return ll;												//returning list
+		return ll; // returning list
+	}
+
+	public static LinkedList<Integer> readFileInt(String path) throws IOException {
+		LinkedList<Integer> ll = new LinkedList<Integer>();
+		File file = new File(path);
+		BufferedReader in = new BufferedReader(new FileReader(file));
+		String strwords[] = in.readLine().split(" "); // storing file data in array
+
+		for (int i = 0; i < strwords.length; i++) {
+			int num = Integer.parseInt(strwords[i]);
+			ll.add(num); // adding array to ArrayList
+		}
+		in.close();
+		return ll;
 	}
 
 	static Node head;
 
 	public static class Node {
 
-		String data;
+		int data1; // for integer data
+		String data; // for string data
+		char data2;
 		Node next;
+
+		Node(int d) {
+			data1 = d;
+			next = null;
+		}
 
 		Node(String d) {
 			data = d;
+			next = null;
+		}
+
+		Node(char d) {
+			data2 = d;
 			next = null;
 		}
 	}
@@ -549,41 +607,152 @@ public class Utility {
 			Node n = head;
 			while (n.next != null) {
 
-				n = n.next;
+				n = n.next; // traversing linkedlist while n.next is not null
 			}
-			n.next = newNode;
+			n.next = newNode; // when null found, inserting new node of String
 		}
 	}
 
-	public static void deleteByKey(String key) {
-		Node currentNode = head;
-		Node prev = null;
-		if (currentNode != null && currentNode.data == key) {
-			head = currentNode.next;
-			System.out.println("found and deleted");
-		}
-		while (currentNode != null && currentNode.data != key) {
-			prev = currentNode;
-			currentNode = currentNode.next;
-		}
-		if (currentNode != null) {
-			prev.next = currentNode.next;
-			System.out.println("found and deleted");
-		}
-		if (currentNode == null) {
-			System.out.println("not found");
-		}
+	public static void insertLinkedListInt(int data) {
+		System.out.println(data);
+		Node newNode = new Node(data);
+		newNode.next = null;
+		if (head == null) {
+			head = newNode;
+		} else {
+			Node n = head;
+			while (n.next != null) {
 
+				n = n.next; // traversing linkedlist while n.next is not null
+			}
+			n.next = newNode; // when null found, inserting new node of int
+		}
+	}
+
+	public static void deleteByKey(String key) throws FileNotFoundException {
+		Node currentNode = head;
+		int temp = 0;
+		while (currentNode.next != null) {
+			if ((currentNode.next.data).equals(key)) { // checking the user input with currentNode data
+				currentNode.next = currentNode.next.next; // if equals then inserting data of next node into current
+															// node
+				temp++; // counting temp
+
+			} else
+				currentNode = currentNode.next; // traversing linkedlist
+		}
+		if (temp == 0) { // if temp is 0 means the user input not found
+			System.out.println("not found. Adding word to link list....");
+			insertLinkedList(key);
+		} else {
+			System.out.println("found and deleted");
+		}
 		printLinkedList();
 	}
 
-	public static void printLinkedList() {
+	public static void printLinkedList() throws FileNotFoundException { // linkedlist to print string
 		Node currentNode = head;
+		PrintWriter pw = new PrintWriter(new File("D:\\sahil.txt")); // giving file location to store the data
 		while (currentNode.next != null) {
-			System.out.print(currentNode.data + "-->");
+			System.out.print(currentNode.data + "-->"); // printing every data data
+			pw.print(currentNode.data); // writing data in external file
+			pw.print(" ");
 			currentNode = currentNode.next;
 		}
+		pw.print(currentNode.data);
+		pw.flush();
 		System.out.println(currentNode.data);
 	}
 
+	public static void printIntegerLinkedList(int arr[]) throws FileNotFoundException { // linkedlist to print int data
+		Node currentNode = head;
+		PrintWriter pw = new PrintWriter(new File("D:\\newnumber.txt")); // file to store output
+		while (currentNode != null) {
+			String s = Integer.toString(currentNode.data1);
+			System.out.print(s + "-->");
+			pw.print(s);
+			pw.print(" ");
+			currentNode = currentNode.next;
+		}
+		pw.flush();
+	}
+
+	public static int[] linkedListToArrayConversion(LinkedList<Integer> ll) {
+		int n = ll.size();
+		int[] arr = new int[n];
+		int a = 0;
+		for (int i = 0; i < ll.size(); i++) {
+			arr[i] = ll.get(a);
+			a++;
+		}
+		return arr;
+	}
+
+	public static LinkedList<Integer> arrayToLinkedListConversion(int[] arr) {
+		LinkedList<Integer> ll = new LinkedList<Integer>();
+		for (int i = 0; i < arr.length; i++) {
+			ll.add(arr[i]);
+		}
+		return ll;
+	}
+
+	public static class Stack {
+
+		static int top = -1;
+		static char[] item = new char[100];
+
+		public static void push(char x) {
+			if (top == 99) // checking if stack is full
+				System.out.println("Stack is full!!");
+			else
+				item[++top] = x; // if not full adding chars to item
+		}
+
+		public static char pop() {
+			if (top == -1) { // checking if stack is empty
+				System.out.println("Stack is empty!!");
+				return '\0';
+			} else { // if not empty then popping the elements
+				char element = item[top];
+				top--;
+				return element;
+			}
+		}
+
+		public static boolean isEmpty() {
+			return (top == -1) ? true : false;
+		}
+	}
+
+	public static boolean areBalanced(char exp[]) {
+		for (int i = 0; i < exp.length; i++) {
+			if (exp[i] == '{' || exp[i] == '[' || exp[i] == '(')
+				Stack.push(exp[i]); // if found any opening brace then it will be pushed in stack
+			if (exp[i] == '}' || exp[i] == ']' || exp[i] == ')') {
+				if (Stack.isEmpty()) // checking for empty stack
+					return false;
+				else if (!isMatching(Stack.pop(), exp[i])) // if not empty checking if parentheses are balanced or not
+					return false; // by passing two parameters
+			}
+		}
+
+		if (Stack.isEmpty())
+			return true;
+		else
+			return false;
+
+	}
+
+	public static boolean isMatching(char c1, char c2) { // checking for match
+		if (c1 == '(' && c2 == ')')
+			return true;
+		if (c1 == '{' && c2 == '}')
+			return true;
+		if (c1 == '[' && c2 == ']')
+			return true;
+		else
+			return false;
+	}
+
+	
 }
