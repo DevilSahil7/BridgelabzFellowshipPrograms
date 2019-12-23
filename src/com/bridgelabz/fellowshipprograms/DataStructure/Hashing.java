@@ -1,17 +1,52 @@
 package com.bridgelabz.fellowshipprograms.DataStructure;
 
-import com.bridgelabz.fellowshipprograms.utility.StackUtility;
+import com.bridgelabz.fellowshipprograms.utility.LinkedListUtility;
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * 
+ * 
+ * @author sahil
+ *
+ */
 public class Hashing {
 
 	public static void main(String[] args) {
-		System.out.println("Enter a number to find: ");
-		int num=Utility.IntegerInput();
-		StackUtility.stackLinkedList(num);
-		//StackUtility.Stack.pushToStack(lp, num);
 		
+		int arr[] = {10,21,32,33,44,55,66,77,88,99};
+		Object [] ob = new Object[11];
+		for(int i = 0; i<11; i++) {
+			ob[i] = new LinkedListUtility();
+		}
+		int stack = 0;
+		for(int i=0; i<arr.length; i++) {
+			stack = arr[i]%11;
+			LinkedListUtility list = (LinkedListUtility) ob[stack];
+			list.insert(arr[i]);
+		}
+		for(int i=0; i<ob.length; i++) {
+			LinkedListUtility list = (LinkedListUtility)ob[i];
+			System.out.println("Stack No "+i+" :=>");
+			list.show();
+			System.out.println();
+		}
+		System.out.println("Enter data to search: ");
+		int data = Utility.IntegerInput();
+		LinkedListUtility list = (LinkedListUtility)ob[data%11];
+		
+		if(list.search(data)) {
+			System.out.println("Found in stack no: "+data%11);
+			list.delete(data);
+			list.show();
+		}
+		else {
+			System.out.println("Not found!");
+			LinkedListUtility list1 = (LinkedListUtility)ob[data%11];
+			list1.insert(data);
+			System.out.println("Stack no "+data%11+" :=>");
+			list1.show();
+		}
 
 	}
-
+	
 }
