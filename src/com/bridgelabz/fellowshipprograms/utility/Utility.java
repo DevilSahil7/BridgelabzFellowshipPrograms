@@ -14,6 +14,7 @@ import java.util.Scanner;
 public class Utility {
 
 	static Scanner sc = new Scanner(System.in);
+
 	public static int IntegerInput() {
 		return sc.nextInt();
 	}
@@ -30,7 +31,6 @@ public class Utility {
 		return sc.nextLong();
 	}
 
-	
 	public static int[] count(int n) // to get the digits from number
 	{
 		int[] count = new int[10];
@@ -47,7 +47,6 @@ public class Utility {
 
 //<=================================Anagram==========================================>
 
-	
 	public static boolean anagram(int n1, int n2) {
 		int[] n1count = count(n1); // generating digits from number
 
@@ -59,9 +58,8 @@ public class Utility {
 		}
 		return true;
 	}
-	
-//<=================================Prime Number==========================================>
 
+//<=================================Prime Number==========================================>
 
 	public static void isPrime(int num) {
 		boolean isPrime = true;
@@ -79,7 +77,6 @@ public class Utility {
 
 //<=================================Flip Coin==========================================>
 
-	
 	public static void flipCoin(int chance) {
 		int heads = 0;
 		int tails = 0;
@@ -95,9 +92,8 @@ public class Utility {
 		System.out.println("Heads appeared " + heads + " times");
 		System.out.println("Tails appeared " + tails + " times");
 	}
-	
-//<=================================Leap Year==========================================>
 
+//<=================================Leap Year==========================================>
 
 	public static void leapYear(int year) {
 		int length = Integer.toString(year).length();
@@ -112,9 +108,8 @@ public class Utility {
 				System.out.println(year + " is not leap year");
 		}
 	}
-	
-//<=================================Power of 2==========================================>
 
+//<=================================Power of 2==========================================>
 
 	public static void powerOfTwo(int power) {
 		if (power >= 0 && power <= 31) { // integer value exceeds when power to the base 2 goes above 31
@@ -128,9 +123,8 @@ public class Utility {
 			powerOfTwo(power);
 		}
 	}
-	
-//<=================================Harmonic Number==========================================>
 
+//<=================================Harmonic Number==========================================>
 
 	public static void harmonic(double harmonic) {
 		double hr = 1;
@@ -139,9 +133,8 @@ public class Utility {
 		}
 		System.out.println("Harmonic number is " + hr);
 	}
-	
-//<=================================Prime Factors==========================================>
 
+//<=================================Prime Factors==========================================>
 
 	public static void primeFactors(int num) {
 		for (int i = 2; i <= num; i++) {
@@ -151,9 +144,16 @@ public class Utility {
 			}
 		}
 	}
-	
-//<=================================2D Matrix==========================================>
 
+	public static long factorial(int n) {
+		long sum = 1;
+		for (int i = n; i > 0; i--) {
+			sum = sum * i;
+		}
+		return sum;
+	}
+
+//<=================================2D Matrix==========================================>
 
 	public static void matrix(int rows, int cols) {
 		// storing elements in matrix
@@ -192,9 +192,8 @@ public class Utility {
 		w.close();
 		w1.close();
 	}
-	
-//<=================================Triplet==========================================>
 
+//<=================================Triplet==========================================>
 
 	public static void triplet(int arr[]) {
 		for (int i = 0; i < arr.length; i++) {
@@ -207,9 +206,8 @@ public class Utility {
 			}
 		}
 	}
-	
-//<=================================Euclidean Distance==========================================>
 
+//<=================================Euclidean Distance==========================================>
 
 	public static void euclideanDistance(double x, double y) {
 		double xx = Math.pow(x, 2);
@@ -217,9 +215,8 @@ public class Utility {
 		double distance = Math.sqrt(xx + yy);
 		System.out.println("Euclidean distance from 0 is: " + distance);
 	}
-	
-//<=================================Roots of Equation==========================================>
 
+//<=================================Roots of Equation==========================================>
 
 	public static void quadratic(double a, double b, double c) {
 		double delta = (b * b) - (4 * a * c);
@@ -227,9 +224,8 @@ public class Utility {
 		double x2 = (-b - Math.sqrt(delta)) / (2 * a);
 		System.out.println("The roots are: " + x1 + " " + x2);
 	}
-	
-//<=================================WindChill==========================================>
 
+//<=================================WindChill==========================================>
 
 	public static void windchill(double temp, double speed) {
 		double w = 35.74 + 0.6215 * temp + (0.4275 * temp - 35.75) * (Math.pow(speed, 0.16));
@@ -238,7 +234,6 @@ public class Utility {
 
 //<=================================Gambler==========================================>
 
-	
 	public static void gambler(int stake, int goal, int trials) {
 		int bets = 0, wins = 0;
 
@@ -258,9 +253,8 @@ public class Utility {
 		System.out.println("Percentage of wins are: " + wins * 100 / trials);
 		System.out.println("Percentage of loss are: " + (trials - wins) * 100 / trials);
 	}
-	
-//<=================================Coupon code==========================================>
 
+//<=================================Coupon code==========================================>
 
 	public static void generateCoupon() {
 		int max = 1000000000;
@@ -275,9 +269,8 @@ public class Utility {
 		System.out.println(coupon);
 
 	}
-	
-//<=================================Stopwatch==========================================>
 
+//<=================================Stopwatch==========================================>
 
 	public static void stopwatch() {
 		double start = 0, end = 0, play, stop;
@@ -290,9 +283,8 @@ public class Utility {
 		double result = (end - start) / 1000; // gives the result of elapsed time
 		System.out.println(result + " seconds");
 	}
-	
-//<=================================Days of week==========================================>
 
+//<=================================Days of week==========================================>
 
 	public static void dayOfWeek(int d, int m, int y) {
 		int day, month, year;
@@ -325,9 +317,8 @@ public class Utility {
 			break;
 		}
 	}
-	
-//<=================================Temperature conversion==========================================>
 
+//<=================================Temperature conversion==========================================>
 
 	public static void temperatureConversion(double temp, int choice) {
 		switch (choice) {
@@ -343,9 +334,8 @@ public class Utility {
 			System.out.println("Enter valid input!!");
 		}
 	}
-	
-//<=================================Monthly Payment==========================================>
 
+//<=================================Monthly Payment==========================================>
 
 	public static void monthlyPayment(double principal, double year, double interest) {
 		double n = 12 * year;
@@ -355,9 +345,8 @@ public class Utility {
 		double result = total + payment;
 		System.out.println(result);
 	}
-	
-//<=================================Newtons square root==========================================>
 
+//<=================================Newtons square root==========================================>
 
 	public static void sqrt(double num, double epsilon) {
 		double t = num;
@@ -366,9 +355,8 @@ public class Utility {
 		}
 		System.out.println(t);
 	}
-	
-//<=================================Decimal to Binary==========================================>
 
+//<=================================Decimal to Binary==========================================>
 
 	public static void toBinary(int num) {
 		int arr[] = new int[8];
@@ -401,9 +389,8 @@ public class Utility {
 		} else
 			System.out.println("The no is not power of 2.");
 	}
-	
-//<=================================String Permutation==========================================>
 
+//<=================================String Permutation==========================================>
 
 	public static void permutation(String str, int sp, int ep) {
 		if (sp == ep) {
@@ -424,9 +411,8 @@ public class Utility {
 		ch[j] = temp;
 		return String.valueOf(ch);
 	}
-	
-//<=================================String Binary Search==========================================>
 
+//<=================================String Binary Search==========================================>
 
 	public static int binarySearch(String arr[], String key) {
 		int left = 0, right = arr.length - 1;
@@ -442,9 +428,8 @@ public class Utility {
 		}
 		return -1;
 	}
-	
-//<=================================Binary Search Generics==========================================>
 
+//<=================================Binary Search Generics==========================================>
 
 	public static <T extends Comparable<T>> int binarySearchGeneric(T arr[], int low, int high, T key) {
 		// using generics for binary search
@@ -461,9 +446,8 @@ public class Utility {
 		return -1;
 
 	}
-	
-//<=================================Integer Binary Search==========================================>
 
+//<=================================Integer Binary Search==========================================>
 
 	public static int binarySearchInt(int arr[], int low, int high) {
 		if (high >= low) {
@@ -482,9 +466,8 @@ public class Utility {
 		}
 		return -1;
 	}
-	
-//<=================================Sorting==========================================>
 
+//<=================================Sorting==========================================>
 
 	public static void insertionSort(int arr[]) {
 		int temp, j;
@@ -519,9 +502,8 @@ public class Utility {
 		}
 		System.out.println();
 	}
-	
-//<=================================Sorting LinkedList==========================================>
 
+//<=================================Sorting LinkedList==========================================>
 
 	public static void orderedLinkedList(LinkedList<Integer> ll) {
 		int temp = 0;
@@ -536,9 +518,8 @@ public class Utility {
 			}
 		}
 	}
-	
-//<=================================Bubble Sort Generics==========================================>
 
+//<=================================Bubble Sort Generics==========================================>
 
 	public static <T extends Comparable<T>> T[] bubbleSortGeneric(T[] arr) {
 		T temp;
@@ -555,9 +536,8 @@ public class Utility {
 		}
 		return arr;
 	}
-	
-//<=================================Anagram==========================================>
 
+//<=================================Anagram==========================================>
 
 	public static void anagram(String str1, String str2) {
 		char[] ch1 = str1.toCharArray(); // converting string to char array
@@ -580,9 +560,8 @@ public class Utility {
 		else
 			System.out.println("Not anagram.");
 	}
-	
-//<=================================Prime No Range==========================================>
 
+//<=================================Prime No Range==========================================>
 
 	public static ArrayList<Integer> primeNoRange(int n) {
 		int num = 0;
@@ -598,12 +577,13 @@ public class Utility {
 		}
 		return al; // it will return prime no list to main method
 	}
-	
+
 //<=================================Prime Anagram==========================================>
 
 	public static int[] primeAnagram(ArrayList<Integer> al) {
-		int k = 0;
+		int k = 0, a=0;
 		int arr[] = new int[170];
+		int[] arr2 = new int [200];
 		for (int i = 0; i < al.size(); i++) {
 			for (int j = i + 1; j < al.size(); j++) {
 				if (anagram(al.get(i), al.get(j))) // it will check anagram function
@@ -614,13 +594,15 @@ public class Utility {
 					arr[k] = al.get(j); // stores second anagram number in array
 					k++; // increments index of array
 				}
+				else {
+					arr2[a] = al.get(i);
+				}
 			}
 		}
 		return arr; // returns array of prime anagrams
 	}
-	
-//<=================================Prime Palindrome==========================================>
 
+//<=================================Prime Palindrome==========================================>
 
 	public static ArrayList<Integer> isPallindrome(ArrayList<Integer> a) {
 		ArrayList<Integer> arr = new ArrayList<Integer>();
@@ -637,9 +619,8 @@ public class Utility {
 		}
 		return arr; // returning array of palindrome numbers
 	}
-	
-//<=================================String file reader==========================================>
 
+//<=================================String file reader==========================================>
 
 	public static LinkedList<String> readFile(String path) throws IOException {
 		LinkedList<String> ll = new LinkedList<String>();
@@ -652,9 +633,8 @@ public class Utility {
 		in.close();
 		return ll; // returning list
 	}
-	
-//<=================================Integer file reader==========================================>
 
+//<=================================Integer file reader==========================================>
 
 	public static LinkedList<Integer> readFileInt(String path) throws IOException {
 		LinkedList<Integer> ll = new LinkedList<Integer>();
@@ -669,9 +649,8 @@ public class Utility {
 		in.close();
 		return ll;
 	}
-	
-//<=================================LinkedList==========================================>
 
+//<=================================LinkedList==========================================>
 
 	static Node head;
 
@@ -680,11 +659,14 @@ public class Utility {
 		int data1; // for integer data
 		String data; // for string data
 		char data2;
-		Node next;
+		public Node next;
 
-		Node(int d) {
-			data1 = d;
-			next = null;
+		public Node prev;
+
+		public Node(int d) {
+			this.data1 = d;
+			this.next = null;
+			this.prev = null;
 		}
 
 		Node(String d) {
@@ -696,7 +678,7 @@ public class Utility {
 			data2 = d;
 			next = null;
 		}
-	}
+	};
 
 	public static void insertLinkedList(String data) {
 		System.out.println(data);
@@ -796,9 +778,8 @@ public class Utility {
 		}
 		return ll;
 	}
-	
-//<=================================Stack operations==========================================>
 
+//<=================================Stack operations==========================================>
 
 	public static class Stack {
 
@@ -827,9 +808,8 @@ public class Utility {
 			return (top == -1) ? true : false;
 		}
 	}
-	
-//<=================================Balanced Parentheses==========================================>
 
+//<=================================Balanced Parentheses==========================================>
 
 	public static boolean areBalanced(char exp[]) {
 		for (int i = 0; i < exp.length; i++) {
@@ -861,5 +841,21 @@ public class Utility {
 			return false;
 	}
 
-	
+//<=================================Binary search tree==========================================>
+
+	public static boolean exist(Node node, int key) {
+		if (node == null) {
+			return false;
+		}
+		if (node.data1 == key) {
+			return true;
+		}
+
+		boolean result1 = exist(node.prev, key);
+		if (result1)
+			return true;
+		boolean result2 = exist(node.next, key);
+		return result2;
+	}
+
 }

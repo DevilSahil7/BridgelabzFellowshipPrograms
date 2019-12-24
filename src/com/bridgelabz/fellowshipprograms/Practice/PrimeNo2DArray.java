@@ -33,7 +33,7 @@ public class PrimeNo2DArray {
 			for (int k = 0; k < 30; k++) {
 				
 		if (arr[i][k]>0) {
-			System.out.print(arr[i][k]+ " ");
+			System.out.print(arr[i][k]+ "_|_");
 			}
 			}
 			System.out.println();
@@ -42,8 +42,9 @@ public class PrimeNo2DArray {
 		aaa=Utility.primeAnagram(al);
 		for (int i = 0; i < 10; i++) {
 			for (int j = 0; j < aaa.length; j++) {
-				System.out.print(aaa[i]+" ");
+				System.out.print(aaa[j]+" ");
 			}
+			
 		}
 		//System.out.println(aaa[0]);
 		
