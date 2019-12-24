@@ -594,9 +594,7 @@ public class Utility {
 					arr[k] = al.get(j); // stores second anagram number in array
 					k++; // increments index of array
 				}
-				else {
-					arr2[a] = al.get(i);
-				}
+				
 			}
 		}
 		return arr; // returns array of prime anagrams
