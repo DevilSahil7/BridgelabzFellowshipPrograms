@@ -77,6 +77,9 @@ public class Utility {
 
 //<=================================Flip Coin==========================================>
 
+	/**
+	 * @param chance
+	 */
 	public static void flipCoin(int chance) {
 		int heads = 0;
 		int tails = 0;
@@ -102,7 +105,7 @@ public class Utility {
 			year = Utility.IntegerInput();
 			leapYear(year);
 		} else {
-			if (year % 100 == 0 || year % 400 == 0 || year % 4 == 0)
+			if (year % 400 == 0 || year % 4 == 0)
 				System.out.println(year + " is leap year");
 			else
 				System.out.println(year + " is not leap year");
@@ -286,36 +289,14 @@ public class Utility {
 
 //<=================================Days of week==========================================>
 
-	public static void dayOfWeek(int d, int m, int y) {
+	public static int dayOfWeek(int d, int m, int y) {
 		int day, month, year;
 		year = y - (14 - m) / 12;
 		int x = year + year / 4 - year / 100 + year / 400;
 		month = m + 12 * ((14 - m) / 12) - 2;
 		day = (d + x + 31 * month / 12) % 7;
-
-		switch (day) {
-		case 0:
-			System.out.println("Its Sunday");
-			break;
-		case 1:
-			System.out.println("Its Monday");
-			break;
-		case 2:
-			System.out.println("Its Tuesday");
-			break;
-		case 3:
-			System.out.println("Its Wednesday");
-			break;
-		case 4:
-			System.out.println("Its Thursday");
-			break;
-		case 5:
-			System.out.println("Its Friday");
-			break;
-		case 6:
-			System.out.println("Its Saturday");
-			break;
-		}
+		return day;
+		
 	}
 
 //<=================================Temperature conversion==========================================>
@@ -486,7 +467,7 @@ public class Utility {
 		}
 	}
 
-	public static void bubbleSort(int arr[]) {
+	public static int[] bubbleSort(int arr[]) {
 		int temp;
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = 1; j < arr.length - i; j++) {
@@ -497,10 +478,11 @@ public class Utility {
 				}
 			}
 		}
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i] + " ");
-		}
-		System.out.println();
+		return arr;
+//		for (int i = 0; i < arr.length; i++) {
+//			System.out.print(arr[i] + " ");
+//		}
+//		System.out.println();
 	}
 
 //<=================================Sorting LinkedList==========================================>
@@ -535,6 +517,24 @@ public class Utility {
 
 		}
 		return arr;
+	}
+
+	public static int removeDuplicatesFromArray(int arr[], int length) {
+		if (length == 0 || length == 1) {
+			return length;
+		}
+		int temp[] = new int[length];
+		int j = 0;
+		for (int i = 0; i < length - 1; i++) {
+			if (arr[i] != arr[i + 1])
+				temp[j++] = arr[i];
+
+		}
+		temp[j++] = arr[length - 1];
+		for (int i = 0; i < j; i++) {
+			arr[i] = temp[i];
+		}
+		return j;
 	}
 
 //<=================================Anagram==========================================>
@@ -581,9 +581,9 @@ public class Utility {
 //<=================================Prime Anagram==========================================>
 
 	public static int[] primeAnagram(ArrayList<Integer> al) {
-		int k = 0, a=0;
+		int k = 0, a = 0;
 		int arr[] = new int[170];
-		int[] arr2 = new int [200];
+		int[] arr2 = new int[200];
 		for (int i = 0; i < al.size(); i++) {
 			for (int j = i + 1; j < al.size(); j++) {
 				if (anagram(al.get(i), al.get(j))) // it will check anagram function
@@ -594,7 +594,7 @@ public class Utility {
 					arr[k] = al.get(j); // stores second anagram number in array
 					k++; // increments index of array
 				}
-				
+
 			}
 		}
 		return arr; // returns array of prime anagrams
@@ -854,6 +854,40 @@ public class Utility {
 			return true;
 		boolean result2 = exist(node.next, key);
 		return result2;
+	}
+	
+	public static String[][] createCalendar(int month, int year) {
+		String calendar[][]= new String [7][7];
+		int day = Utility.dayOfWeek(1, month, year);
+		String dayOfWeek[]= {"sun", "mon", "tue", "wed", "thu", "fri", "sat"};
+		int daysOfMonth[]= {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		int days =daysOfMonth[month];
+		int k=1, flag=0;
+		for(int i=0; i<7; i++) {
+			for( int j= 0; j<7; j++) {
+				if(k<=days) {
+					if(i==0) {
+						calendar[i][j]=dayOfWeek[j];
+					}
+					else if(day==j) {
+						calendar[i][j]= String.valueOf(k);
+						day++;
+						k++;
+						flag = 1;
+					}
+					else {
+						calendar[i][j]="";
+					}
+				}
+				else {
+					calendar[i][j]="";
+				}
+			}
+			if(flag==1) {
+				day = 0;
+			}
+		}
+		return calendar;
 	}
 
 }

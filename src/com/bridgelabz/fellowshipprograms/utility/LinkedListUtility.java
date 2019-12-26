@@ -4,12 +4,13 @@ package com.bridgelabz.fellowshipprograms.utility;
  * purpose: to perform different operations of linked list
  * 
  * @author sahil
+ * @param <E>
  *
  */
-public class LinkedListUtility {
+public class LinkedListUtility<E> {
 
-	Node head;
-	int size;
+	Node<E> head;
+	static int size;
 
 	public LinkedListUtility() {
 		size = 0;
@@ -28,6 +29,7 @@ public class LinkedListUtility {
 
 	public <E> void insert(E data) {
 		Node node = new Node<E>(data);
+		
 		size++;
 		if (head == null) {
 			head = node;
@@ -88,4 +90,19 @@ public class LinkedListUtility {
 	public int size() {
 		return size;
 	}
+	
+	
+	
+//	while(temp.link!=null) {
+//		prev=temp;
+//		temp=temp.link;
+//	}
+//	if(prev==temp) {
+//		top=null;
+//	}
+//	data=temp.data;
+//	prev.link=null;
+//	System.out.println(temp.data+" ");
+
+	
 }

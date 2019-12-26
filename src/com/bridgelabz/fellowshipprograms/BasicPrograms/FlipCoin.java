@@ -16,5 +16,7 @@ public class FlipCoin {
 		Utility.flipCoin(chance);
 
 	}
+	
+	
 
 }
