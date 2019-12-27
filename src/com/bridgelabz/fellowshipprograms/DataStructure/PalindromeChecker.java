@@ -16,16 +16,17 @@ public class PalindromeChecker {
 		String str = Utility.stringInput();
 		int mid = str.length() / 2;
 		for (int j = str.length() - 1; j >= 0; j--) {
-			QueueUtility.insertDequeue(str.charAt(j));
+			QueueUtility.enqueue(str.charAt(j));
 
 		}
-		QueueUtility.printDequeue();
+		QueueUtility.printQueue();
 
 		char c1, c2;
 		int i = 0;
 		int flag = 0;
 		while(i<mid) {
 			c1 = QueueUtility.dequeueFront();
+			System.out.println();
 			System.out.print(c1);
 			c2 = QueueUtility.dequeueRear();
 			System.out.print(c2);

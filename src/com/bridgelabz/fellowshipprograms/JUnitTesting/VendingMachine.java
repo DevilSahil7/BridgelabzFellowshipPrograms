@@ -26,8 +26,7 @@ public class VendingMachine {
 			noteCalc(amount);
 			break;
 		case 2:
-			amount = sprite * quantity;
-			;
+			amount = sprite * quantity;			
 			System.out.println("Your total: " + amount);
 			System.out.print("Enter cash: ");
 			cash = Utility.IntegerInput();

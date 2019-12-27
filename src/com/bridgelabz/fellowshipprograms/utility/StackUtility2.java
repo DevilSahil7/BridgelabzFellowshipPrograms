@@ -1,9 +1,8 @@
 package com.bridgelabz.fellowshipprograms.utility;
 
-import com.bridgelabz.fellowshipprograms.utility.LinkedListUtility.Node;
+import com.bridgelabz.fellowshipprograms.utility.StackUtility.Node;
 
-public class StackUtility2<E> {
-
+public class StackUtility2 {
 	static Node top;
 
 	static class Node<E> {
@@ -15,7 +14,6 @@ public class StackUtility2<E> {
 			next = null;
 		}
 	}
-
 	public static <E> void push(E data) {
 		Node n = new Node(data);
 		if (top == null) {
@@ -29,7 +27,7 @@ public class StackUtility2<E> {
 			// System.out.println(temp.data);
 		}
 	}
-
+	
 	public static <E> E pop() {
 		Node temp = top;
 		Node prev = temp;
@@ -49,7 +47,7 @@ public class StackUtility2<E> {
 		}
 		return data;
 	}
-
+	
 	public static boolean isEmpty() {
 		if (top == null) {
 			return true;

@@ -1,0 +1,33 @@
+package com.bridgelabz.fellowshipprograms.DataStructure;
+
+import com.bridgelabz.fellowshipprograms.utility.QueueUtility;
+import com.bridgelabz.fellowshipprograms.utility.Utility;
+
+public class DaysOfWeek {
+
+	public static void main(String[] args) {
+		int week, month, year;
+		do {
+			System.out.println("Enter week from 1-5: ");
+			week = Utility.IntegerInput();
+			System.out.print("Enter month from 1-12: ");
+			month = Utility.IntegerInput();
+			System.out.print("Enter a year: ");
+			year = Utility.IntegerInput();
+		}while(week>0 && week<6 == false||month>12 && month <1);
+		
+		String calendar[][]= Utility.createCalendar(month, year);
+		for(int i=0; i<7; i++) {
+			for(int j=0; j<7; j++) {
+				if(week ==i) {
+					if(calendar[i][j]!="") {
+						QueueUtility.enqueue(calendar[i][j]);
+					}
+				}
+			}
+		}
+		System.out.println("Dates of week are: ");
+		QueueUtility.printQueue();
+	}
+
+}

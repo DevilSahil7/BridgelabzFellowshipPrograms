@@ -479,10 +479,6 @@ public class Utility {
 			}
 		}
 		return arr;
-//		for (int i = 0; i < arr.length; i++) {
-//			System.out.print(arr[i] + " ");
-//		}
-//		System.out.println();
 	}
 
 //<=================================Sorting LinkedList==========================================>
@@ -583,7 +579,6 @@ public class Utility {
 	public static int[] primeAnagram(ArrayList<Integer> al) {
 		int k = 0, a = 0;
 		int arr[] = new int[170];
-		int[] arr2 = new int[200];
 		for (int i = 0; i < al.size(); i++) {
 			for (int j = i + 1; j < al.size(); j++) {
 				if (anagram(al.get(i), al.get(j))) // it will check anagram function
@@ -730,19 +725,21 @@ public class Utility {
 		}
 		printLinkedList();
 	}
+	
+	
 
 	public static void printLinkedList() throws FileNotFoundException { // linkedlist to print string
 		Node currentNode = head;
-		PrintWriter pw = new PrintWriter(new File("D:\\sahil.txt")); // giving file location to store the data
+		PrintWriter pw = new PrintWriter(new File("/home/admin1/Desktop/Sahil/sahil")); // giving file location to store the data
 		while (currentNode.next != null) {
 			System.out.print(currentNode.data + "-->"); // printing every data data
-			pw.print(currentNode.data); // writing data in external file
+			pw.print(currentNode.data); // writing existing data in external file
 			pw.print(" ");
 			currentNode = currentNode.next;
 		}
-		pw.print(currentNode.data);
+		pw.print(currentNode.data);	//writing added data or removing removed data
 		pw.flush();
-		System.out.println(currentNode.data);
+		System.out.println(currentNode.data);	//displaying data
 	}
 
 	public static void printIntegerLinkedList(int arr[]) throws FileNotFoundException { // linkedlist to print int data
@@ -777,51 +774,21 @@ public class Utility {
 		return ll;
 	}
 
-//<=================================Stack operations==========================================>
-
-	public static class Stack {
-
-		static int top = -1;
-		static char[] item = new char[100];
-
-		public static void push(char x) {
-			if (top == 99) // checking if stack is full
-				System.out.println("Stack is full!!");
-			else
-				item[++top] = x; // if not full adding chars to item
-		}
-
-		public static char pop() {
-			if (top == -1) { // checking if stack is empty
-				System.out.println("Stack is empty!!");
-				return '\0';
-			} else { // if not empty then popping the elements
-				char element = item[top];
-				top--;
-				return element;
-			}
-		}
-
-		public static boolean isEmpty() {
-			return (top == -1) ? true : false;
-		}
-	}
-
 //<=================================Balanced Parentheses==========================================>
 
 	public static boolean areBalanced(char exp[]) {
 		for (int i = 0; i < exp.length; i++) {
 			if (exp[i] == '{' || exp[i] == '[' || exp[i] == '(')
-				Stack.push(exp[i]); // if found any opening brace then it will be pushed in stack
+				StackUtility.push(exp[i]); // if found any opening brace then it will be pushed in stack
 			if (exp[i] == '}' || exp[i] == ']' || exp[i] == ')') {
-				if (Stack.isEmpty()) // checking for empty stack
+				if (StackUtility.isEmpty()) // checking for empty stack
 					return false;
-				else if (!isMatching(Stack.pop(), exp[i])) // if not empty checking if parentheses are balanced or not
+				else if (!isMatching(StackUtility.pop(), exp[i])) // if not empty checking if parentheses are balanced or not
 					return false; // by passing two parameters
 			}
 		}
 
-		if (Stack.isEmpty())
+		if (StackUtility.isEmpty())
 			return true;
 		else
 			return false;
@@ -855,13 +822,14 @@ public class Utility {
 		boolean result2 = exist(node.next, key);
 		return result2;
 	}
-	
+//<=================================Calendar==========================================>
+
 	public static String[][] createCalendar(int month, int year) {
 		String calendar[][]= new String [7][7];
 		int day = Utility.dayOfWeek(1, month, year);
 		String dayOfWeek[]= {"sun", "mon", "tue", "wed", "thu", "fri", "sat"};
 		int daysOfMonth[]= {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-		int days =daysOfMonth[month];
+		int days =daysOfMonth[month-1];
 		int k=1, flag=0;
 		for(int i=0; i<7; i++) {
 			for( int j= 0; j<7; j++) {
@@ -888,6 +856,58 @@ public class Utility {
 			}
 		}
 		return calendar;
+	}
+	
+//<=================================Bank Operations==========================================>
+
+	
+	/**
+	 * purpose: to perform the banking operations like withdraw and deposit money
+	 * 
+	 * @param bankBalance
+	 * @return bankBalance
+	 */
+	public static int transactions(int bankBalance) {
+		System.out.println("++++++++++Welcome to Bank++++++++++");
+		System.out.println("1.Withdraw Money");
+		System.out.println("2.Deposit Money");
+		System.out.print("Enter your choice: ");
+		int choice = Utility.IntegerInput();
+		bankBalance = yourChoice(choice, bankBalance);
+		return bankBalance;
+	}
+	public static int yourChoice(int choice, int bankBalance) {
+		switch(choice) {
+		case 1:
+			System.out.print("Enter money to withdraw: ");
+			int withdraw = Utility.IntegerInput();
+			bankBalance = calculations(withdraw, choice, bankBalance);
+			QueueUtility.dequeue();
+			System.out.println("bank balance: "+bankBalance);
+			System.out.println();
+			System.out.println("Transaction completed. User Dequeued!\n");
+			break;
+		case 2:
+			System.out.print("Enter money to deposite:");
+			int deposite = Utility.IntegerInput();
+			bankBalance = calculations(deposite, choice, bankBalance);
+			QueueUtility.dequeue();
+			System.out.println("bank balance: "+bankBalance);
+			System.out.println("Transaction completed. User Dequeued!\n");
+			
+			break;
+		}
+		return bankBalance;
+	}
+	public static int calculations(int money, int choice, int bankBalance) {
+		if(choice == 1) {
+			bankBalance = bankBalance - money;
+			return bankBalance;
+		}
+		else {
+			bankBalance = bankBalance + money;
+			return bankBalance;
+		}
 	}
 
 }
