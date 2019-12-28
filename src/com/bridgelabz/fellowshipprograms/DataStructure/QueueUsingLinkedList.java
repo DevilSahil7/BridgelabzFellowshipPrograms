@@ -2,7 +2,7 @@ package com.bridgelabz.fellowshipprograms.DataStructure;
 
 import java.util.ArrayList;
 
-import com.bridgelabz.fellowshipprograms.utility.QueueUtility;
+import com.bridgelabz.fellowshipprograms.utility.QueueUsingLinkedListUtility;
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 public class QueueUsingLinkedList {
@@ -18,10 +18,10 @@ public class QueueUsingLinkedList {
 		length = Utility.removeDuplicatesFromArray(arr, length);
 		for (int i = 0; i < length; i++) {
 			if (arr[i] != 0)
-				QueueUtility.enqueue(arr[i]);
+				QueueUsingLinkedListUtility.enqueue(arr[i]);
 		}
 		while (length > 1) {
-			int data = QueueUtility.dequeue();
+			int data = QueueUsingLinkedListUtility.dequeue();
 			System.out.print(data + "->");
 			length--;
 		}

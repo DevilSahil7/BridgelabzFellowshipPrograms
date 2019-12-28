@@ -1,6 +1,6 @@
 package com.bridgelabz.fellowshipprograms.DataStructure;
 
-import com.bridgelabz.fellowshipprograms.utility.QueueUtility;
+import com.bridgelabz.fellowshipprograms.utility.QueueUsingLinkedListUtility;
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
@@ -16,19 +16,19 @@ public class PalindromeChecker {
 		String str = Utility.stringInput();
 		int mid = str.length() / 2;
 		for (int j = str.length() - 1; j >= 0; j--) {
-			QueueUtility.enqueue(str.charAt(j));
+			QueueUsingLinkedListUtility.enqueue(str.charAt(j));
 
 		}
-		QueueUtility.printQueue();
+		QueueUsingLinkedListUtility.printQueue();
 
 		char c1, c2;
 		int i = 0;
 		int flag = 0;
 		while(i<mid) {
-			c1 = QueueUtility.dequeueFront();
+			c1 = QueueUsingLinkedListUtility.dequeueFront();
 			System.out.println();
 			System.out.print(c1);
-			c2 = QueueUtility.dequeueRear();
+			c2 = QueueUsingLinkedListUtility.dequeueRear();
 			System.out.print(c2);
 			System.out.println();
 			

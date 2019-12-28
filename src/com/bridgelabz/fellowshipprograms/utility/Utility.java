@@ -779,16 +779,16 @@ public class Utility {
 	public static boolean areBalanced(char exp[]) {
 		for (int i = 0; i < exp.length; i++) {
 			if (exp[i] == '{' || exp[i] == '[' || exp[i] == '(')
-				StackUtility.push(exp[i]); // if found any opening brace then it will be pushed in stack
+				StackUsingLinkedListUtility.push(exp[i]); // if found any opening brace then it will be pushed in stack
 			if (exp[i] == '}' || exp[i] == ']' || exp[i] == ')') {
-				if (StackUtility.isEmpty()) // checking for empty stack
+				if (StackUsingLinkedListUtility.isEmpty()) // checking for empty stack
 					return false;
-				else if (!isMatching(StackUtility.pop(), exp[i])) // if not empty checking if parentheses are balanced or not
+				else if (!isMatching(StackUsingLinkedListUtility.pop(), exp[i])) // if not empty checking if parentheses are balanced or not
 					return false; // by passing two parameters
 			}
 		}
 
-		if (StackUtility.isEmpty())
+		if (StackUsingLinkedListUtility.isEmpty())
 			return true;
 		else
 			return false;
@@ -882,7 +882,7 @@ public class Utility {
 			System.out.print("Enter money to withdraw: ");
 			int withdraw = Utility.IntegerInput();
 			bankBalance = calculations(withdraw, choice, bankBalance);
-			QueueUtility.dequeue();
+			QueueUsingLinkedListUtility.dequeue();
 			System.out.println("bank balance: "+bankBalance);
 			System.out.println();
 			System.out.println("Transaction completed. User Dequeued!\n");
@@ -891,7 +891,7 @@ public class Utility {
 			System.out.print("Enter money to deposite:");
 			int deposite = Utility.IntegerInput();
 			bankBalance = calculations(deposite, choice, bankBalance);
-			QueueUtility.dequeue();
+			QueueUsingLinkedListUtility.dequeue();
 			System.out.println("bank balance: "+bankBalance);
 			System.out.println("Transaction completed. User Dequeued!\n");
 			

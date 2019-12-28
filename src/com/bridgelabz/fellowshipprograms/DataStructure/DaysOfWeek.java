@@ -1,6 +1,6 @@
 package com.bridgelabz.fellowshipprograms.DataStructure;
 
-import com.bridgelabz.fellowshipprograms.utility.QueueUtility;
+import com.bridgelabz.fellowshipprograms.utility.QueueUsingLinkedListUtility;
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 public class DaysOfWeek {
@@ -21,13 +21,13 @@ public class DaysOfWeek {
 			for(int j=0; j<7; j++) {
 				if(week ==i) {
 					if(calendar[i][j]!="") {
-						QueueUtility.enqueue(calendar[i][j]);
+						QueueUsingLinkedListUtility.enqueue(calendar[i][j]);
 					}
 				}
 			}
 		}
 		System.out.println("Dates of week are: ");
-		QueueUtility.printQueue();
+		QueueUsingLinkedListUtility.printQueue();
 	}
 
 }

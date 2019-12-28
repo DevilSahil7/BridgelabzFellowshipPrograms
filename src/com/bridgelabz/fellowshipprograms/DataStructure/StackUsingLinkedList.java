@@ -1,7 +1,7 @@
 package com.bridgelabz.fellowshipprograms.DataStructure;
 
 import java.util.ArrayList;
-import com.bridgelabz.fellowshipprograms.utility.StackUtility;
+import com.bridgelabz.fellowshipprograms.utility.StackUsingLinkedListUtility;
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 public class StackUsingLinkedList {
@@ -17,10 +17,10 @@ public class StackUsingLinkedList {
 		length = Utility.removeDuplicatesFromArray(arr, length);
 		for (int i = 0; i < length; i++) {
 			if (arr[i] != 0)
-				StackUtility.push(arr[i]);
+				StackUsingLinkedListUtility.push(arr[i]);
 		}
 		while (length > 1) {
-			int data = StackUtility.pop();
+			int data = StackUsingLinkedListUtility.pop();
 			System.out.print(data + "->");
 			length--;
 		}

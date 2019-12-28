@@ -9,7 +9,7 @@ package com.bridgelabz.fellowshipprograms.utility;
  */
 public class LinkedListUtility<E> {
 
-	Node<E> head;
+	static Node head;
 	static int size;
 
 	public LinkedListUtility() {
@@ -17,7 +17,7 @@ public class LinkedListUtility<E> {
 		head = null;
 	}
 
-	class Node<E> {
+	static class Node<E> {
 		E data;
 		Node<E> next;
 
@@ -27,7 +27,7 @@ public class LinkedListUtility<E> {
 		}
 	}
 
-	public <E> void insert(E data) {
+	public static <E> void insert(E data) {
 		Node node = new Node<E>(data);
 		
 		size++;
@@ -42,14 +42,14 @@ public class LinkedListUtility<E> {
 		}
 	}
 
-	public <T> void delete(T str) {
+	public static <E> void delete(E str) {	
 		Node n = head;
 		Node prev = head;
-		if (n.data.equals(str)) {
+		if (n.data.equals(str)) {	//deletes if data present at head position
 			head = n.next;
 			size--;
 		}
-		while (n.next != null) {
+		while (n.next != null) {	//traversing and finding data to delete
 			if (n.data.equals(str)) {
 				prev.next = n.next;
 				size--;
@@ -57,7 +57,7 @@ public class LinkedListUtility<E> {
 			prev = n;
 			n = n.next;
 		}
-		if (n.data.equals(str)) {
+		if (n.data.equals(str)) {	//deletes the data at last if present
 			if (n.next == null) {
 				prev.next = null;
 				size--;
@@ -65,7 +65,7 @@ public class LinkedListUtility<E> {
 		}
 	}
 
-	public <E extends Comparable<E>> boolean search(E data) {
+	public static <E extends Comparable<E>> boolean search(E data) {
 		Node n = head;
 		while (n != null) {
 			if (data.compareTo((E)n.data) == 0) {
@@ -76,7 +76,7 @@ public class LinkedListUtility<E> {
 		return false;
 	}
 
-	public <E> void show() {
+	public static <E> void show() {
 		Node n = head;
 		if (n == null) {
 			System.out.println("Empty");
@@ -89,20 +89,5 @@ public class LinkedListUtility<E> {
 
 	public int size() {
 		return size;
-	}
-	
-	
-	
-//	while(temp.link!=null) {
-//		prev=temp;
-//		temp=temp.link;
-//	}
-//	if(prev==temp) {
-//		top=null;
-//	}
-//	data=temp.data;
-//	prev.link=null;
-//	System.out.println(temp.data+" ");
-
-	
+	}	
 }
