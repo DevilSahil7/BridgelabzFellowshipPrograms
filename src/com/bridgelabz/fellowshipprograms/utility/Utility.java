@@ -882,7 +882,7 @@ public class Utility {
 			System.out.print("Enter money to withdraw: ");
 			int withdraw = Utility.IntegerInput();
 			bankBalance = calculations(withdraw, choice, bankBalance);
-			QueueUsingLinkedListUtility.dequeue();
+			QueueUtility.dequeue();
 			System.out.println("bank balance: "+bankBalance);
 			System.out.println();
 			System.out.println("Transaction completed. User Dequeued!\n");
@@ -891,7 +891,7 @@ public class Utility {
 			System.out.print("Enter money to deposite:");
 			int deposite = Utility.IntegerInput();
 			bankBalance = calculations(deposite, choice, bankBalance);
-			QueueUsingLinkedListUtility.dequeue();
+			QueueUtility.dequeue();
 			System.out.println("bank balance: "+bankBalance);
 			System.out.println("Transaction completed. User Dequeued!\n");
 			

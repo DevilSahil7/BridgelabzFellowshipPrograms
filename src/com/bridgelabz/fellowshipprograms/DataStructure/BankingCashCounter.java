@@ -1,6 +1,7 @@
 package com.bridgelabz.fellowshipprograms.DataStructure;
 
 import com.bridgelabz.fellowshipprograms.utility.QueueUsingLinkedListUtility;
+import com.bridgelabz.fellowshipprograms.utility.QueueUtility;
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 public class BankingCashCounter {
@@ -10,8 +11,9 @@ public class BankingCashCounter {
 		System.out.print("Enter number of users: ");
 		int users = Utility.IntegerInput();
 		System.out.println("Enqueueing people...\n");
+		QueueUtility nw = new QueueUtility(users);
 		for(i=0; i<users; i++) {
-			QueueUsingLinkedListUtility.enqueue(i);
+			QueueUtility.enqueue(i);
 		}
 		for(i=0; i<users; i++) {
 			bankBalance = Utility.transactions(bankBalance);
