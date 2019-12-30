@@ -16,19 +16,19 @@ public class QueueInTwoStacks {
 		int year = Utility.IntegerInput();
 		
 		String [][] arr = Utility.createCalendar(month, year);
-		for(int i=0; i<7; i++) {
+		for(int i=0; i<6; i++) {
 			for(int j=0; j<7; j++) {
 				QueueUsingLinkedListUtility.enqueue(arr[i][j]);
 			}
 		}
-		for(int i=0; i<7; i++) {
+		for(int i=0; i<6; i++) {
 			for(int j=0; j<7; j++) {
 				StackUsingLinkedListUtility.push(QueueUsingLinkedListUtility.dequeueFront());
 			}
 		}
 		System.out.println();
 		System.out.println("Popped items from stack 1");
-		for(int i=0; i<7; i++) {
+		for(int i=0; i<6; i++) {
 			for(int j=0; j<7; j++) {
 				items = StackUsingLinkedListUtility.pop();
 				StackUsingLinkedListUtility2.push(items);
@@ -36,7 +36,7 @@ public class QueueInTwoStacks {
 		}
 		System.out.println();
 		System.out.println("Popped items from stack 2");
-		for(int i=0; i<7; i++) {
+		for(int i=0; i<6; i++) {
 			for(int j=0; j<7; j++) {
 				items = StackUsingLinkedListUtility2.pop();
 				System.out.print(items+"\t");

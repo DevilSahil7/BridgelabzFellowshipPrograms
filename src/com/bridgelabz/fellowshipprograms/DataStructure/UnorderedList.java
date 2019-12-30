@@ -15,7 +15,7 @@ public class UnorderedList {
 
 	public static void main(String[] args) throws IOException  {
 			LinkedList<String> str= new LinkedList<String>();
-			str=Utility.readFile("/home/admin1/Desktop/Sahil/sahil");		//reading file
+			str=Utility.readFile("/home/admin1/Documents/file.txt");		//reading file
 			System.out.println(str);
 			for(String data:str)		
 			{

@@ -1,8 +1,13 @@
 package com.bridgelabz.fellowshipprograms.utility;
 
-import java.util.NoSuchElementException;
 
-public class QueueUtility<E> {
+/**
+ * purpose: to perform queue operations
+ * 
+ * @author admin1
+ *
+ */
+public class QueueUtility {
 
 	private static int capacity;
 	static int queue[];
@@ -59,81 +64,4 @@ public class QueueUtility<E> {
 			size--;
 		}
 	}
-
-//
-//	protected static int queue[];
-//	protected static int front;
-//	protected static int rear;
-//	protected static int size;
-//	protected static int len;
-//
-//	public QueueUtility(int n) {
-//		size = n;
-//		len = 0;
-//		queue = new int[size];
-//		front = -1;
-//		rear = -1;
-//	}
-//
-//	public static boolean isEmpty() {
-//		return front == -1;
-//	}
-//
-//	public static boolean isFull() {
-//		return front == 0 && rear == size - 1;
-//	}
-//
-//	public static int getSize() {
-//		return len;
-//	}
-//
-//	public static int peek() {
-//		if (isEmpty()) {
-//			throw new NoSuchElementException("Underflow");
-//		}
-//		return queue[front];
-//	}
-//
-//	public static void enqueue(int i) {
-//		if (rear == -1) {
-//			front = 0;
-//			rear = 0;
-//			queue[rear] = i;
-//		} else if (rear + 1 >= size) {
-//			throw new IndexOutOfBoundsException("OverFlow Exception");
-//		} else if (rear + 1 < size) {
-//			queue[++rear] = i;
-//			len++;
-//		}
-//
-//	}
-//
-//	public static int dequeue() {
-//		if (isEmpty()) {
-//			throw new NoSuchElementException("Underflow exception");
-//		} else {
-//			len--;
-//			int element = queue[front];
-//			if (front == rear) {
-//				front = -1;
-//				rear = -1;
-//			}
-//			else
-//				front++;
-//			return element;
-//		}
-//	}
-//	
-//	public static void show() {
-//		System.out.println("\nQueue: ");
-//		if(len==0) {
-//			System.out.println("Empty\n");
-//			return;
-//		}
-//		for(int i=front; i<=rear; i++) {
-//			System.out.println(queue[i]+" ");
-//			System.out.println();
-//		}
-//	}
-
 }

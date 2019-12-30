@@ -1,5 +1,8 @@
 package com.bridgelabz.fellowshipprograms.DataStructure;
 
+import java.io.IOException;
+import java.util.LinkedList;
+
 import com.bridgelabz.fellowshipprograms.utility.LinkedListUtility;
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
@@ -11,9 +14,10 @@ import com.bridgelabz.fellowshipprograms.utility.Utility;
  */
 public class Hashing {
 
-	public static void main(String[] args) {
-		
-		int arr[] = {10,21,32,33,44,55,66,77,88,99};
+	public static void main(String[] args) throws IOException {
+		LinkedList<Integer> ll = new LinkedList<Integer>();
+		ll.addAll(Utility.readFileInt("/home/admin1/Documents/number.txt"));
+		int arr []= Utility.linkedListToArrayConversion(ll);
 		Object [] ob = new Object[11];
 		for(int i = 0; i<11; i++) {
 			ob[i] = new LinkedListUtility();
@@ -45,6 +49,7 @@ public class Hashing {
 			list1.insert(data);
 			System.out.println("Stack no "+data%11+" :=>");
 			list1.show();
+			
 		}
 
 	}

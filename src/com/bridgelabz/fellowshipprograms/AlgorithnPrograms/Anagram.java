@@ -15,7 +15,10 @@ public class Anagram {
 		String str1 = Utility.stringInput();
 		System.out.println("Enter second String: ");
 		String str2 = Utility.stringInput();
-		Utility.anagram(str1, str2);
+		if(Utility.anagram(str1, str2) == true) 
+			System.out.println("Strings are anagrams");
+		else
+			System.out.println("Strings are not anagrams");
 
 	}
 

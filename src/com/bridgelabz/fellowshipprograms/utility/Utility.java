@@ -47,6 +47,14 @@ public class Utility {
 
 //<=================================Anagram==========================================>
 
+	
+	/**
+	 * purpose: to check two strings are anagram or not
+	 * 
+	 * @param n1 : String 1
+	 * @param n2 : String 2
+	 * @return 	 : true or false
+	 */
 	public static boolean anagram(int n1, int n2) {
 		int[] n1count = count(n1); // generating digits from number
 
@@ -61,6 +69,11 @@ public class Utility {
 
 //<=================================Prime Number==========================================>
 
+	/**
+	 * purpose: to check number is prime or not
+	 * 
+	 * @param num	: number to check prime
+	 */
 	public static void isPrime(int num) {
 		boolean isPrime = true;
 		for (int i = 2; i <= num / 2; i++) {
@@ -78,7 +91,7 @@ public class Utility {
 //<=================================Flip Coin==========================================>
 
 	/**
-	 * @param chance
+	 * @param chance : User's chances
 	 */
 	public static void flipCoin(int chance) {
 		int heads = 0;
@@ -98,17 +111,29 @@ public class Utility {
 
 //<=================================Leap Year==========================================>
 
-	public static void leapYear(int year) {
+	
+	/**
+	 * purpose: to check the leap year
+	 * 
+	 * @param year
+	 * @return	true or false
+	 */
+	public static boolean leapYear(int year) {
+		int count =0;
 		int length = Integer.toString(year).length();
 		if (length != 4) {
 			System.out.print("Enter correct year: ");
 			year = Utility.IntegerInput();
 			leapYear(year);
 		} else {
-			if (year % 400 == 0 || year % 4 == 0)
-				System.out.println(year + " is leap year");
-			else
-				System.out.println(year + " is not leap year");
+			if (year % 100==0 || year % 400 == 0 || year % 4 == 0) {
+				count++;
+			}
+		}
+		if(count ==0) {
+			return false;
+		}else {
+			return true;
 		}
 	}
 
@@ -535,7 +560,7 @@ public class Utility {
 
 //<=================================Anagram==========================================>
 
-	public static void anagram(String str1, String str2) {
+	public static boolean anagram(String str1, String str2) {
 		char[] ch1 = str1.toCharArray(); // converting string to char array
 		char[] ch2 = str2.toCharArray();
 		boolean status = false;
@@ -552,9 +577,9 @@ public class Utility {
 			}
 		}
 		if (status)
-			System.out.println("The strings are anagram.");
+			return true;
 		else
-			System.out.println("Not anagram.");
+			return false;
 	}
 
 //<=================================Prime No Range==========================================>
@@ -581,7 +606,7 @@ public class Utility {
 		int arr[] = new int[170];
 		for (int i = 0; i < al.size(); i++) {
 			for (int j = i + 1; j < al.size(); j++) {
-				if (anagram(al.get(i), al.get(j))) // it will check anagram function
+				if (anagram(al.get(i), al.get(j))==true) // it will check anagram function
 				{
 
 					arr[k] = al.get(i); // stores first anagram number in array
@@ -631,15 +656,21 @@ public class Utility {
 
 	public static LinkedList<Integer> readFileInt(String path) throws IOException {
 		LinkedList<Integer> ll = new LinkedList<Integer>();
+		int num=0;
+		try {
 		File file = new File(path);
 		BufferedReader in = new BufferedReader(new FileReader(file));
 		String strwords[] = in.readLine().split(" "); // storing file data in array
-
 		for (int i = 0; i < strwords.length; i++) {
-			int num = Integer.parseInt(strwords[i]);
+			num =Integer.parseInt(strwords[i]);
 			ll.add(num); // adding array to ArrayList
 		}
 		in.close();
+		
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
 		return ll;
 	}
 
@@ -730,7 +761,7 @@ public class Utility {
 
 	public static void printLinkedList() throws FileNotFoundException { // linkedlist to print string
 		Node currentNode = head;
-		PrintWriter pw = new PrintWriter(new File("/home/admin1/Desktop/Sahil/sahil")); // giving file location to store the data
+		PrintWriter pw = new PrintWriter(new File("/home/admin1/Documents/file.txt")); // giving file location to store the data
 		while (currentNode.next != null) {
 			System.out.print(currentNode.data + "-->"); // printing every data data
 			pw.print(currentNode.data); // writing existing data in external file
@@ -744,15 +775,24 @@ public class Utility {
 
 	public static void printIntegerLinkedList(int arr[]) throws FileNotFoundException { // linkedlist to print int data
 		Node currentNode = head;
-		PrintWriter pw = new PrintWriter(new File("D:\\newnumber.txt")); // file to store output
+		PrintWriter pw = new PrintWriter(new File("/home/admin1/Documents/output.txt")); // file to store output
 		while (currentNode != null) {
 			String s = Integer.toString(currentNode.data1);
 			System.out.print(s + "-->");
 			pw.print(s);
-			pw.print(" ");
+			pw.print("->");
 			currentNode = currentNode.next;
 		}
 		pw.flush();
+		
+	}
+	
+	public static void writeFile(String list1)throws FileNotFoundException {
+		PrintWriter pw = new PrintWriter(new File("/home/admin1/Documents/output.txt"));
+		pw.print(list1);
+		pw.print(" ");
+		pw.flush();
+		
 	}
 
 	public static int[] linkedListToArrayConversion(LinkedList<Integer> ll) {
@@ -824,6 +864,13 @@ public class Utility {
 	}
 //<=================================Calendar==========================================>
 
+	/**
+	 * purpose: to create a calendar of any month of any year
+	 * 
+	 * @param month
+	 * @param year
+	 * @return array of calendar
+	 */
 	public static String[][] createCalendar(int month, int year) {
 		String calendar[][]= new String [7][7];
 		int day = Utility.dayOfWeek(1, month, year);
@@ -831,7 +878,7 @@ public class Utility {
 		int daysOfMonth[]= {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 		int days =daysOfMonth[month-1];
 		int k=1, flag=0;
-		for(int i=0; i<7; i++) {
+		for(int i=0; i<6; i++) {
 			for( int j= 0; j<7; j++) {
 				if(k<=days) {
 					if(i==0) {

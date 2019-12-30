@@ -1,7 +1,13 @@
 package com.bridgelabz.fellowshipprograms.utility;
 
-import com.bridgelabz.fellowshipprograms.utility.LinkedListUtility.Node;
 
+/**
+ * purpose: to perform stack operations using Linked list
+ * 
+ * @author admin1
+ *
+ * @param <E>
+ */
 public class StackUsingLinkedListUtility<E> {
 
 	static Node top;

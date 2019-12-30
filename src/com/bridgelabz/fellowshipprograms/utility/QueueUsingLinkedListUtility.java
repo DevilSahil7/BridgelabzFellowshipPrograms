@@ -1,7 +1,12 @@
 package com.bridgelabz.fellowshipprograms.utility;
 
-import com.bridgelabz.fellowshipprograms.utility.LinkedListUtility.Node;
 
+/**
+ * purpose: To perform queue operations using Linked list
+ * 
+ * @author admin1
+ *
+ */
 public class QueueUsingLinkedListUtility {
 	static Node head;
 

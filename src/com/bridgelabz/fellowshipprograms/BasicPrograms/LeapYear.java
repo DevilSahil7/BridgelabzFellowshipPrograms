@@ -13,7 +13,10 @@ public class LeapYear {
 	public static void main(String[] args) {
 		System.out.print("Enter any year to check leap year: ");
 		int year = Utility.IntegerInput();
-		Utility.leapYear(year);
+		if(Utility.leapYear(year)==true) 
+			System.out.println(year+" is leap year");
+		else 
+			System.out.println(year+" is not leap year");
+		
 	}
-
 }

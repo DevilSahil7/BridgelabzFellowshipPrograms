@@ -1,59 +1,54 @@
 package com.bridgelabz.fellowshipprograms.utility;
 
-import com.bridgelabz.fellowshipprograms.utility.LinkedListUtility.Node;
+/**
+ * purpose: to perform stack operations
+ * 
+ * @author admin1
+ *
+ */
+public class StackUtility {
 
-public class StackUtility<E> {
+	static int MAX = 1000;
+	static int top;
+	static int arr[] = new int[MAX];
 
-	static Node top;
-
-	static class Node<E> {
-		E data;
-		Node next;
-
-		public Node(E data) {
-			this.data = data;
-			next = null;
-		}
-	}
-
-	public static <E> void push(E data) {
-		Node n = new Node(data);
-		if (top == null) {
-			top = n;
-		} else {
-			Node temp = top;
-			while (temp.next != null) {
-				temp = temp.next;
-			}
-			temp.next = n;
-			// System.out.println(temp.data);
-		}
-	}
-
-	public static <E> E pop() {
-		Node temp = top;
-		Node prev = temp;
-		E data = null;
-		if (isEmpty()) {
-			System.out.println("Stack is empty");
-		} else {
-			while (temp.next != null) {
-				prev = temp;
-				temp = temp.next;
-			}
-			if (prev == temp) {
-				top = null;
-			}
-			data = (E) temp.data;
-			prev.next = null;
-		}
-		return data;
+	public StackUtility() {
+		top = -1;
 	}
 
 	public static boolean isEmpty() {
-		if (top == null) {
-			return true;
-		}
-		return false;
+		return (top < 0);
 	}
+
+	public static void push(int data) {
+		if (top > MAX - 1) {
+			System.out.println("Stack Underflow!");
+		} else {
+			arr[++top] = data;
+			System.out.println("Data pushed!");
+		}
+	}
+	
+	public static int pop() {
+		if(top<0) {
+			System.out.println("Stack Overflow!");
+			return 0;
+		}
+		else {
+			int x = arr[top--];
+			return x;
+		}
+	}
+	
+	public static int peek() {
+		if(top<0) {
+			System.out.println("Stack Underflow!");
+			return 0;
+		}
+		else {
+			int x = arr[top];
+			return x;
+		}
+	}
+
 }

@@ -6,7 +6,7 @@ import com.bridgelabz.fellowshipprograms.utility.Utility.Node;;
 /**
  * purpose: to search the number in binary tree
  * 
- * @author sahil
+ * @author sahil kudake
  *
  */
 public class BinarySearchTree {

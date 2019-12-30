@@ -1,7 +1,12 @@
 package com.bridgelabz.fellowshipprograms.utility;
 
-import com.bridgelabz.fellowshipprograms.utility.StackUsingLinkedListUtility.Node;
-
+/**
+ * purpose: to perform stack operations using Linked list
+ * 
+ * @author admin1
+ *
+ * @param <E>
+ */
 public class StackUsingLinkedListUtility2 {
 	static Node top;
 
@@ -14,6 +19,7 @@ public class StackUsingLinkedListUtility2 {
 			next = null;
 		}
 	}
+
 	public static <E> void push(E data) {
 		Node n = new Node(data);
 		if (top == null) {
@@ -27,7 +33,7 @@ public class StackUsingLinkedListUtility2 {
 			// System.out.println(temp.data);
 		}
 	}
-	
+
 	public static <E> E pop() {
 		Node temp = top;
 		Node prev = temp;
@@ -47,7 +53,7 @@ public class StackUsingLinkedListUtility2 {
 		}
 		return data;
 	}
-	
+
 	public static boolean isEmpty() {
 		if (top == null) {
 			return true;

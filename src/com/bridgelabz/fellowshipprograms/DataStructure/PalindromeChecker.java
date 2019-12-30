@@ -17,7 +17,6 @@ public class PalindromeChecker {
 		int mid = str.length() / 2;
 		for (int j = str.length() - 1; j >= 0; j--) {
 			QueueUsingLinkedListUtility.enqueue(str.charAt(j));
-
 		}
 		QueueUsingLinkedListUtility.printQueue();
 
@@ -38,12 +37,10 @@ public class PalindromeChecker {
 			}
 			i++;
 		}
-		if(flag==1) {
+		if(flag==1)
 			System.out.println("String is not palindrome");
-		}
-		else {
+		else 
 			System.out.println("String is palindrome");
-		}
 	}
 
 }
