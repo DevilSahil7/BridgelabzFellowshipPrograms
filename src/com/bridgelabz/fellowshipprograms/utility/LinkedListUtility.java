@@ -3,7 +3,7 @@ package com.bridgelabz.fellowshipprograms.utility;
 /**
  * purpose: to perform different operations of linked list
  * 
- * @author sahil
+ * @author sahil kudake
  * @param <E>
  *
  */
@@ -28,13 +28,13 @@ public class LinkedListUtility<E> {
 	}
 
 	public static <E> void insert(E data) {
-		Node node = new Node<E>(data);
-		
+		Node<E> node = new Node<E>(data);
+
 		size++;
 		if (head == null) {
 			head = node;
 		} else {
-			Node n = head;
+			Node<E> n = head;
 			while (n.next != null) {
 				n = n.next;
 			}
@@ -42,14 +42,39 @@ public class LinkedListUtility<E> {
 		}
 	}
 
-	public static <E> void delete(E str) {	
-		Node n = head;
-		Node prev = head;
-		if (n.data.equals(str)) {	//deletes if data present at head position
+	public static <E> void insertAtStart(E data) {
+		Node<E> node = new Node<E>(data);
+		node.data = data;
+		node.next = null;
+		node.next = head;
+		head = node;
+	}
+
+	public static <E> void insertAtIndex(int index, E data) {
+		Node<E> node = new Node<E>(data);
+		node.data = data;
+		node.next = null;
+		Node<E> n = head;
+		if (index == 0) {
+			insertAtStart(data);
+		}
+		else {
+			for(int i = 0; i<index-1; i++) {
+				n = n.next;
+			}
+			node.next = n.next;
+			n.next = node;
+		}
+	}
+
+	public static <E> void delete(E str) {
+		Node<E> n = head;
+		Node<E> prev = head;
+		if (n.data.equals(str)) { // deletes if data present at head position
 			head = n.next;
 			size--;
 		}
-		while (n.next != null) {	//traversing and finding data to delete
+		while (n.next != null) { // traversing and finding data to delete
 			if (n.data.equals(str)) {
 				prev.next = n.next;
 				size--;
@@ -57,18 +82,34 @@ public class LinkedListUtility<E> {
 			prev = n;
 			n = n.next;
 		}
-		if (n.data.equals(str)) {	//deletes the data at last if present
+		if (n.data.equals(str)) { // deletes the data at last if present
 			if (n.next == null) {
 				prev.next = null;
 				size--;
 			}
 		}
 	}
+	
+	public static <E> void deleteAtIndex(int index) {
+		Node<E> n = head;
+		for(int i =0 ; i<index-1; i++) {
+			n = n.next;
+		}
+		n.next = n.next.next;
+	}
+	
+	public static <E> void deleteLast() {
+		Node<E> n = head;
+		while(n.next.next!=null) {
+			n = n.next;
+		}
+		n.next = null;
+	}
 
 	public static <E extends Comparable<E>> boolean search(E data) {
-		Node n = head;
+		Node<E> n = head;
 		while (n != null) {
-			if (data.compareTo((E)n.data) == 0) {
+			if (data.compareTo((E) n.data) == 0) {
 				return true;
 			}
 			n = n.next;
@@ -77,7 +118,7 @@ public class LinkedListUtility<E> {
 	}
 
 	public static <E> void show() {
-		Node n = head;
+		Node<E> n = head;
 		if (n == null) {
 			System.out.println("Empty");
 		}
@@ -89,5 +130,5 @@ public class LinkedListUtility<E> {
 
 	public int size() {
 		return size;
-	}	
+	}
 }

@@ -4,7 +4,7 @@ import com.bridgelabz.fellowshipprograms.utility.QueueUsingLinkedListUtility;
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
- * purpose: to check the dates of the week
+ * purpose: to check the dates of the week using queue
  * 
  * @author sahil kudake
  *
@@ -20,13 +20,13 @@ public class DatesOfWeek {
 			month = Utility.IntegerInput();
 			System.out.print("Enter a year: ");
 			year = Utility.IntegerInput();
-		}while(week>0 && week<6 == false||month>12 && month <1);
-		
-		String calendar[][]= Utility.createCalendar(month, year);
-		for(int i=0; i<6; i++) {
-			for(int j=0; j<7; j++) {
-				if(week ==i) {
-					if(calendar[i][j]!="") {
+		} while (week > 0 && week < 6 == false || month > 12 && month < 1);
+
+		String calendar[][] = Utility.createCalendar(month, year);
+		for (int i = 0; i < 6; i++) {
+			for (int j = 0; j < 7; j++) {
+				if (week == i) {
+					if (calendar[i][j] != "") {
 						QueueUsingLinkedListUtility.enqueue(calendar[i][j]);
 					}
 				}

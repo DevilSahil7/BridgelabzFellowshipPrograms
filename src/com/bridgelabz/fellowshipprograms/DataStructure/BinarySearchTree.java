@@ -13,7 +13,7 @@ public class BinarySearchTree {
 
 	public static void main(String[] args) {
 		Node n = new Node(0);
-		n.prev = new Node(1);
+		n.prev = new Node(1); // adding data to tree
 		n.prev.prev = new Node(3);
 		n.prev.prev.prev = new Node(7);
 		n.next = new Node(10);
@@ -25,7 +25,7 @@ public class BinarySearchTree {
 		System.out.println("Enter a number to search in Binary tree: ");
 		int number = Utility.IntegerInput();
 
-		if (Utility.exist(n, number))
+		if (Utility.exist(n, number)) // checking the number in binary tree if exists or not
 			System.out.println("Found");
 		else
 			System.out.println("Not found.");

@@ -7,14 +7,14 @@ import com.bridgelabz.fellowshipprograms.utility.Utility;
 /**
  * purpose: print prime numbers in 2D array 0-100, 100-200 range up to 1000
  * 
- * @author sahil
+ * @author sahil kudake
  *
  */
 public class PrimeNo2DMatrix {
 
 	public static void main(String[] args) {
 		ArrayList<Integer> al = new ArrayList<Integer>();
-		al = Utility.primeNoRange(1000); // storing prie numbers in arraylist
+		al = Utility.primeNoRange(1000); // storing prime numbers in array list
 		int[][] arr = new int[10][50];
 		int z = 0, range = 100, count = 0;
 		while (z < al.size()) {

@@ -9,7 +9,7 @@ import com.bridgelabz.fellowshipprograms.utility.Utility;
 /**
  * purpose: to create slot of 10 to store chain of numbers and to search a number.
  * 			and to search a number. if found then delete if not then insert.
- * @author sahil
+ * @author sahil kudake
  *
  */
 public class Hashing {

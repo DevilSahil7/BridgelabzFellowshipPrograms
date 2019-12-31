@@ -11,18 +11,18 @@ public class QueueUsingLinkedList {
 		ArrayList<Integer> al = new ArrayList<Integer>();
 		int arr[] = new int[100];
 
-		al = Utility.primeNoRange(1000);
-		arr = Utility.primeAnagram(al);
+		al = Utility.primeNoRange(1000); // prime number list
+		arr = Utility.primeAnagram(al); // prime number anagram array
 		Utility.bubbleSort(arr);
 		int length = arr.length;
 		length = Utility.removeDuplicatesFromArray(arr, length);
 		for (int i = 0; i < length; i++) {
 			if (arr[i] != 0)
-				QueueUsingLinkedListUtility.enqueue(arr[i]);
+				QueueUsingLinkedListUtility.enqueue(arr[i]);// adding data to queue
 		}
 		while (length > 1) {
-			int data = QueueUsingLinkedListUtility.dequeue();
-			System.out.print(data + "->");
+			int data = QueueUsingLinkedListUtility.dequeue();// removing data from queue
+			System.out.print(data + "->"); // printing data
 			length--;
 		}
 

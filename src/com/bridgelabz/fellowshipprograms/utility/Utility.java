@@ -47,13 +47,12 @@ public class Utility {
 
 //<=================================Anagram==========================================>
 
-	
 	/**
 	 * purpose: to check two strings are anagram or not
 	 * 
 	 * @param n1 : String 1
 	 * @param n2 : String 2
-	 * @return 	 : true or false
+	 * @return : true or false
 	 */
 	public static boolean anagram(int n1, int n2) {
 		int[] n1count = count(n1); // generating digits from number
@@ -72,7 +71,7 @@ public class Utility {
 	/**
 	 * purpose: to check number is prime or not
 	 * 
-	 * @param num	: number to check prime
+	 * @param num : number to check prime
 	 */
 	public static void isPrime(int num) {
 		boolean isPrime = true;
@@ -111,34 +110,38 @@ public class Utility {
 
 //<=================================Leap Year==========================================>
 
-	
 	/**
 	 * purpose: to check the leap year
 	 * 
 	 * @param year
-	 * @return	true or false
+	 * @return true or false
 	 */
 	public static boolean leapYear(int year) {
-		int count =0;
+		int count = 0;
 		int length = Integer.toString(year).length();
 		if (length != 4) {
 			System.out.print("Enter correct year: ");
 			year = Utility.IntegerInput();
 			leapYear(year);
 		} else {
-			if (year % 100==0 || year % 400 == 0 || year % 4 == 0) {
+			if (year % 100 == 0 || year % 400 == 0 || year % 4 == 0) {
 				count++;
 			}
 		}
-		if(count ==0) {
+		if (count == 0) {
 			return false;
-		}else {
+		} else {
 			return true;
 		}
 	}
 
 //<=================================Power of 2==========================================>
 
+	/**
+	 * purpose: to print the power of 2 up to given number
+	 * 
+	 * @param power
+	 */
 	public static void powerOfTwo(int power) {
 		if (power >= 0 && power <= 31) { // integer value exceeds when power to the base 2 goes above 31
 			for (int i = 0; i < power; i++) {
@@ -154,6 +157,11 @@ public class Utility {
 
 //<=================================Harmonic Number==========================================>
 
+	/**
+	 * purpose: to print the harmonic number of given number
+	 * 
+	 * @param harmonic
+	 */
 	public static void harmonic(double harmonic) {
 		double hr = 1;
 		for (int i = 2; i <= harmonic; i++) {
@@ -164,6 +172,11 @@ public class Utility {
 
 //<=================================Prime Factors==========================================>
 
+	/**
+	 * purpose: to print the prime factors of given number
+	 * 
+	 * @param num
+	 */
 	public static void primeFactors(int num) {
 		for (int i = 2; i <= num; i++) {
 			while (num % i == 0) {
@@ -183,6 +196,12 @@ public class Utility {
 
 //<=================================2D Matrix==========================================>
 
+	/**
+	 * purpose: to print the 2D matrix and store it in file
+	 * 
+	 * @param rows
+	 * @param cols
+	 */
 	public static void matrix(int rows, int cols) {
 		// storing elements in matrix
 		int arr[][] = new int[rows][cols];
@@ -223,6 +242,11 @@ public class Utility {
 
 //<=================================Triplet==========================================>
 
+	/**
+	 * purpose: to find sum of three numbers is zero
+	 * 
+	 * @param arr
+	 */
 	public static void triplet(int arr[]) {
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = i + 1; j < arr.length; j++) {
@@ -237,6 +261,12 @@ public class Utility {
 
 //<=================================Euclidean Distance==========================================>
 
+	/**
+	 * purpose: to find the euclidean distance
+	 * 
+	 * @param x
+	 * @param y
+	 */
 	public static void euclideanDistance(double x, double y) {
 		double xx = Math.pow(x, 2);
 		double yy = Math.pow(y, 2);
@@ -246,6 +276,13 @@ public class Utility {
 
 //<=================================Roots of Equation==========================================>
 
+	/**
+	 * purpose: to find the roots of quadratic equation
+	 * 
+	 * @param a
+	 * @param b
+	 * @param c
+	 */
 	public static void quadratic(double a, double b, double c) {
 		double delta = (b * b) - (4 * a * c);
 		double x1 = (-b + Math.sqrt(delta)) / (2 * a);
@@ -284,6 +321,11 @@ public class Utility {
 
 //<=================================Coupon code==========================================>
 
+	/**
+	 * purpose: to generate random coupon number
+	 * 
+	 * 
+	 */
 	public static void generateCoupon() {
 		int max = 1000000000;
 		char[] ch = "qwertyuiopasdfghjklzxcvbnm0123456789".toCharArray();
@@ -321,7 +363,7 @@ public class Utility {
 		month = m + 12 * ((14 - m) / 12) - 2;
 		day = (d + x + 31 * month / 12) % 7;
 		return day;
-		
+
 	}
 
 //<=================================Temperature conversion==========================================>
@@ -364,6 +406,11 @@ public class Utility {
 
 //<=================================Decimal to Binary==========================================>
 
+	/**
+	 * purpose: to convert a number in to binary
+	 * 
+	 * @param num
+	 */
 	public static void toBinary(int num) {
 		int arr[] = new int[8];
 		int i = 0;
@@ -560,6 +607,13 @@ public class Utility {
 
 //<=================================Anagram==========================================>
 
+	/**
+	 * purpose: to check the two strings are anagram or not
+	 * 
+	 * @param str1
+	 * @param str2
+	 * @return
+	 */
 	public static boolean anagram(String str1, String str2) {
 		char[] ch1 = str1.toCharArray(); // converting string to char array
 		char[] ch2 = str2.toCharArray();
@@ -584,6 +638,12 @@ public class Utility {
 
 //<=================================Prime No Range==========================================>
 
+	/**
+	 * purpose: to print the prime numbers in given range
+	 * 
+	 * @param n: given range
+	 * @return : list of prime numbers
+	 */
 	public static ArrayList<Integer> primeNoRange(int n) {
 		int num = 0;
 		ArrayList<Integer> al = new ArrayList<Integer>();
@@ -606,7 +666,7 @@ public class Utility {
 		int arr[] = new int[170];
 		for (int i = 0; i < al.size(); i++) {
 			for (int j = i + 1; j < al.size(); j++) {
-				if (anagram(al.get(i), al.get(j))==true) // it will check anagram function
+				if (anagram(al.get(i), al.get(j)) == true) // it will check anagram function
 				{
 
 					arr[k] = al.get(i); // stores first anagram number in array
@@ -656,19 +716,18 @@ public class Utility {
 
 	public static LinkedList<Integer> readFileInt(String path) throws IOException {
 		LinkedList<Integer> ll = new LinkedList<Integer>();
-		int num=0;
+		int num = 0;
 		try {
-		File file = new File(path);
-		BufferedReader in = new BufferedReader(new FileReader(file));
-		String strwords[] = in.readLine().split(" "); // storing file data in array
-		for (int i = 0; i < strwords.length; i++) {
-			num =Integer.parseInt(strwords[i]);
-			ll.add(num); // adding array to ArrayList
-		}
-		in.close();
-		
-		}
-		catch(Exception e) {
+			File file = new File(path);
+			BufferedReader in = new BufferedReader(new FileReader(file));
+			String strwords[] = in.readLine().split(" "); // storing file data in array
+			for (int i = 0; i < strwords.length; i++) {
+				num = Integer.parseInt(strwords[i]);
+				ll.add(num); // adding array to ArrayList
+			}
+			in.close();
+
+		} catch (Exception e) {
 			System.out.println(e);
 		}
 		return ll;
@@ -756,21 +815,20 @@ public class Utility {
 		}
 		printLinkedList();
 	}
-	
-	
 
 	public static void printLinkedList() throws FileNotFoundException { // linkedlist to print string
 		Node currentNode = head;
-		PrintWriter pw = new PrintWriter(new File("/home/admin1/Documents/file.txt")); // giving file location to store the data
+		PrintWriter pw = new PrintWriter(new File("/home/admin1/Documents/file.txt")); // giving file location to store
+																						// the data
 		while (currentNode.next != null) {
 			System.out.print(currentNode.data + "-->"); // printing every data data
 			pw.print(currentNode.data); // writing existing data in external file
 			pw.print(" ");
 			currentNode = currentNode.next;
 		}
-		pw.print(currentNode.data);	//writing added data or removing removed data
+		pw.print(currentNode.data); // writing added data or removing removed data
 		pw.flush();
-		System.out.println(currentNode.data);	//displaying data
+		System.out.println(currentNode.data); // displaying data
 	}
 
 	public static void printIntegerLinkedList(int arr[]) throws FileNotFoundException { // linkedlist to print int data
@@ -784,15 +842,15 @@ public class Utility {
 			currentNode = currentNode.next;
 		}
 		pw.flush();
-		
+
 	}
-	
-	public static void writeFile(String list1)throws FileNotFoundException {
+
+	public static void writeFile(String list1) throws FileNotFoundException {
 		PrintWriter pw = new PrintWriter(new File("/home/admin1/Documents/output.txt"));
 		pw.print(list1);
 		pw.print(" ");
 		pw.flush();
-		
+
 	}
 
 	public static int[] linkedListToArrayConversion(LinkedList<Integer> ll) {
@@ -816,6 +874,12 @@ public class Utility {
 
 //<=================================Balanced Parentheses==========================================>
 
+	/**
+	 * purpose: to check the balancing of parameters
+	 * 
+	 * @param exp : array of parentheses
+	 * @return : true or false
+	 */
 	public static boolean areBalanced(char exp[]) {
 		for (int i = 0; i < exp.length; i++) {
 			if (exp[i] == '{' || exp[i] == '[' || exp[i] == '(')
@@ -823,7 +887,8 @@ public class Utility {
 			if (exp[i] == '}' || exp[i] == ']' || exp[i] == ')') {
 				if (StackUsingLinkedListUtility.isEmpty()) // checking for empty stack
 					return false;
-				else if (!isMatching(StackUsingLinkedListUtility.pop(), exp[i])) // if not empty checking if parentheses are balanced or not
+				else if (!isMatching(StackUsingLinkedListUtility.pop(), exp[i])) // if not empty checking if parentheses
+																					// are balanced or not
 					return false; // by passing two parameters
 			}
 		}
@@ -832,7 +897,6 @@ public class Utility {
 			return true;
 		else
 			return false;
-
 	}
 
 	public static boolean isMatching(char c1, char c2) { // checking for match
@@ -848,6 +912,11 @@ public class Utility {
 
 //<=================================Binary search tree==========================================>
 
+	/**
+	 * @param node
+	 * @param key  : the number to be found
+	 * @return
+	 */
 	public static boolean exist(Node node, int key) {
 		if (node == null) {
 			return false;
@@ -872,47 +941,43 @@ public class Utility {
 	 * @return array of calendar
 	 */
 	public static String[][] createCalendar(int month, int year) {
-		String calendar[][]= new String [7][7];
+		String calendar[][] = new String[7][7];
 		int day = Utility.dayOfWeek(1, month, year);
-		String dayOfWeek[]= {"sun", "mon", "tue", "wed", "thu", "fri", "sat"};
-		int daysOfMonth[]= {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-		int days =daysOfMonth[month-1];
-		int k=1, flag=0;
-		for(int i=0; i<6; i++) {
-			for( int j= 0; j<7; j++) {
-				if(k<=days) {
-					if(i==0) {
-						calendar[i][j]=dayOfWeek[j];
-					}
-					else if(day==j) {
-						calendar[i][j]= String.valueOf(k);
+		String dayOfWeek[] = { "sun", "mon", "tue", "wed", "thu", "fri", "sat" };
+		int daysOfMonth[] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+		int days = daysOfMonth[month - 1];
+		int k = 1, flag = 0;
+		for (int i = 0; i < 6; i++) {
+			for (int j = 0; j < 7; j++) {
+				if (k <= days) {
+					if (i == 0) {
+						calendar[i][j] = dayOfWeek[j];
+					} else if (day == j) {
+						calendar[i][j] = String.valueOf(k);
 						day++;
 						k++;
 						flag = 1;
+					} else {
+						calendar[i][j] = "";
 					}
-					else {
-						calendar[i][j]="";
-					}
-				}
-				else {
-					calendar[i][j]="";
+				} else {
+					calendar[i][j] = "";
 				}
 			}
-			if(flag==1) {
+			if (flag == 1) {
 				day = 0;
 			}
 		}
 		return calendar;
 	}
-	
+
 //<=================================Bank Operations==========================================>
 
-	
 	/**
 	 * purpose: to perform the banking operations like withdraw and deposit money
 	 * 
-	 * @param bankBalance
-	 * @return bankBalance
+	 * @param bankBalance : bank balance before transaction
+	 * @return bankBalance : updated bank balance after transaction
 	 */
 	public static int transactions(int bankBalance) {
 		System.out.println("++++++++++Welcome to Bank++++++++++");
@@ -920,17 +985,18 @@ public class Utility {
 		System.out.println("2.Deposit Money");
 		System.out.print("Enter your choice: ");
 		int choice = Utility.IntegerInput();
-		bankBalance = yourChoice(choice, bankBalance);
+		bankBalance = yourChoice(choice, bankBalance); // performing users choice operation
 		return bankBalance;
 	}
+
 	public static int yourChoice(int choice, int bankBalance) {
-		switch(choice) {
+		switch (choice) {
 		case 1:
 			System.out.print("Enter money to withdraw: ");
 			int withdraw = Utility.IntegerInput();
 			bankBalance = calculations(withdraw, choice, bankBalance);
-			QueueUtility.dequeue();
-			System.out.println("bank balance: "+bankBalance);
+			QueueUtility.dequeue();// dequeuing user after transaction
+			System.out.println("bank balance: " + bankBalance);
 			System.out.println();
 			System.out.println("Transaction completed. User Dequeued!\n");
 			break;
@@ -938,20 +1004,21 @@ public class Utility {
 			System.out.print("Enter money to deposite:");
 			int deposite = Utility.IntegerInput();
 			bankBalance = calculations(deposite, choice, bankBalance);
-			QueueUtility.dequeue();
-			System.out.println("bank balance: "+bankBalance);
+			QueueUtility.dequeue();// dequeuing user after transaction
+			System.out.println("bank balance: " + bankBalance);
 			System.out.println("Transaction completed. User Dequeued!\n");
-			
+
 			break;
 		}
 		return bankBalance;
 	}
-	public static int calculations(int money, int choice, int bankBalance) {
-		if(choice == 1) {
+
+	public static int calculations(int money, int choice, int bankBalance) { // calculation of money by users input
+																				// choice
+		if (choice == 1) {
 			bankBalance = bankBalance - money;
 			return bankBalance;
-		}
-		else {
+		} else {
 			bankBalance = bankBalance + money;
 			return bankBalance;
 		}
