@@ -92,10 +92,15 @@ public class LinkedListUtility<E> {
 	
 	public static <E> void deleteAtIndex(int index) {
 		Node<E> n = head;
-		for(int i =0 ; i<index-1; i++) {
-			n = n.next;
+		if(index==0) {
+			head = head.next;
 		}
-		n.next = n.next.next;
+		else {
+			for(int i =0 ; i<index-1; i++) {
+				n = n.next;
+			}
+			n.next = n.next.next;
+		}
 	}
 	
 	public static <E> void deleteLast() {
@@ -123,10 +128,22 @@ public class LinkedListUtility<E> {
 			System.out.println("Empty");
 		}
 		while (n != null) {
-			System.out.println(n.data + "-->");
+			System.out.print(n.data + "-->");
 			n = n.next;
 		}
 	}
+	
+	public int index(E item) {
+		Node<E> temp = head;
+		int count = 0;
+		while (item != (temp.data)) {
+			count++;
+			temp = temp.next;
+
+		}
+		return count;
+	}
+
 
 	public int size() {
 		return size;

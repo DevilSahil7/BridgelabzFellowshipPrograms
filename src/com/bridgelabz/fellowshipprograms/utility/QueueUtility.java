@@ -46,7 +46,7 @@ public class QueueUtility {
 			}
 			queue[rear] = data;
 			size++;
-			System.out.println("Data added!!");
+			//System.out.println("Data added!!");
 		}
 	}
 

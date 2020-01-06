@@ -20,6 +20,7 @@ public class BankingCashCounter {
 		for (i = 0; i < users; i++) {
 			QueueUtility.enqueue(i); // adding users to the queue
 		}
+		System.out.println(users+" added");
 		for (i = 0; i < users; i++) {
 			bankBalance = Utility.transactions(bankBalance); // users transactions
 		}

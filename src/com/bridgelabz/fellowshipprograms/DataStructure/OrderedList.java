@@ -3,6 +3,7 @@ package com.bridgelabz.fellowshipprograms.DataStructure;
 import java.io.IOException;
 import java.util.LinkedList;
 
+import com.bridgelabz.fellowshipprograms.utility.LinkedListDemo;
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
@@ -22,9 +23,14 @@ public class OrderedList {
 		int arr[] = Utility.linkedListToArrayConversion(ll);
 		Utility.bubbleSort(arr);
 		for (int data : arr) {
-			Utility.insertLinkedListInt(data); // inserting data into linked list
+			LinkedListDemo.insert(data); // inserting data into linked list
 		}
-		Utility.printIntegerLinkedList(arr); // printing data from linked list
+		LinkedListDemo.printList(); // printing data from linked list
+	
+		System.out.print("Enter a number to find: ");
+		int num = Utility.IntegerInput();
+		LinkedListDemo.delete(num);
+	
 	}
 
 }
