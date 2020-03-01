@@ -1,11 +1,11 @@
-package com.bridgelabz.fellowshipprograms.JUnitTesting;
+package com.bridgelabz.fellowshipprograms.junittesting;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
- * purpose: swap nibbles and find new number. also finding the newa number is power of 2 or not
+ * Purpose: swap nibbles and find new number. also finding the newa number is power of 2 or not
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class Binary {

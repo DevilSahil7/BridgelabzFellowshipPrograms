@@ -1,12 +1,12 @@
-package com.bridgelabz.fellowshipprograms.DataStructure;
+package com.bridgelabz.fellowshipprograms.datastructure;
 
 import com.bridgelabz.fellowshipprograms.utility.QueueUsingLinkedListUtility;
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
- * purpose: Check the string is palindrome or not using dequeue
+ * Purpose: Check the string is palindrome or not using dequeue
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class PalindromeChecker {

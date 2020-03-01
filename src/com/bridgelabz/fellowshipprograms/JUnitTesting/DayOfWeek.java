@@ -1,25 +1,25 @@
-package com.bridgelabz.fellowshipprograms.JUnitTesting;
+package com.bridgelabz.fellowshipprograms.junittesting;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
- * purpose: to find day of week
+ * Purpose: to find day of week
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class DayOfWeek {
 
 	public static void main(String[] args) {
 		System.out.println("Enter day: ");
-		int d = Utility.IntegerInput();
+		int day = Utility.IntegerInput();
 		System.out.println("Enter month: ");
-		int m = Utility.IntegerInput();
+		int month = Utility.IntegerInput();
 		System.out.println("Enter year: ");
-		int y = Utility.IntegerInput();
-		int day = Utility.dayOfWeek(d, m, y);
+		int year = Utility.IntegerInput();
+		int dayOfWeek = Utility.dayOfWeek(day, month, year);
 
-		switch (day) {
+		switch (dayOfWeek) {
 		case 0:
 			System.out.println("Its Sunday");
 			break;

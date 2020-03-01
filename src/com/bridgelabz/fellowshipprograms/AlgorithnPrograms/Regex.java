@@ -1,4 +1,4 @@
-package com.bridgelabz.fellowshipprograms.AlgorithnPrograms;
+package com.bridgelabz.fellowshipprograms.algorithnprograms;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -8,7 +8,7 @@ import com.bridgelabz.fellowshipprograms.utility.Utility;
 /**
  * purpose: customizing the message using regular expression
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class Regex {

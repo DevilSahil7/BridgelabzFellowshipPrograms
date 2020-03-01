@@ -1,7 +1,11 @@
 package com.bridgelabz.fellowshipprograms.utility;
 
-import com.bridgelabz.fellowshipprograms.utility.LinkedListUtility.Node;
-
+/**
+ * Purpose: to perform queue operations
+ * 
+ * @author Sahil Kudake
+ *
+ */
 public class QueueUtility2 {
 	static Node head;
 
@@ -14,48 +18,47 @@ public class QueueUtility2 {
 			next = null;
 		}
 	}
+
 	public static <E> void enqueue(int data) {
 		Node temp;
 		Node node = new Node(data);
-		if(head == null) {
+		if (head == null) {
 			head = node;
-		}
-		else {
+		} else {
 			temp = head;
-			while(temp.next!=null) {
-				temp=temp.next;
+			while (temp.next != null) {
+				temp = temp.next;
 			}
-			temp.next=node;
+			temp.next = node;
 		}
 	}
-	
+
 	public static <E> E dequeue() {
 		E data = null;
-		if(!isEmpty()) {
+		if (!isEmpty()) {
 			Node temp = head;
-			data = (E)temp.data;
-			head= temp.next;
-		}
-		else {
+			data = (E) temp.data;
+			head = temp.next;
+		} else {
 			System.out.println("Queue is empty");
 		}
 		return data;
 	}
+
 	public static boolean isEmpty() {
-		if(head==null)
+		if (head == null)
 			return true;
 		return false;
 	}
-	
+
 	public static void printQueue() {
-		if(!isEmpty()) {
+		if (!isEmpty()) {
 			Node temp = head;
-			while(temp!=null) {
-				System.out.print(temp.data+" ");
-				temp=temp.next;
+			while (temp != null) {
+				System.out.print(temp.data + " ");
+				temp = temp.next;
 			}
-		}
-		else {
+		} else {
 			System.out.println("Queue is empty");
 		}
 	}

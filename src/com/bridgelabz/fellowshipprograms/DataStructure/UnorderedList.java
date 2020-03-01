@@ -1,4 +1,4 @@
-package com.bridgelabz.fellowshipprograms.DataStructure;
+package com.bridgelabz.fellowshipprograms.datastructure;
 
 import java.io.IOException;
 import java.util.LinkedList;
@@ -6,9 +6,9 @@ import java.util.LinkedList;
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
- * purpose: read the file from system and arrange it as linked list
+ * Purpose: read the file from system and arrange it as linked list
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class UnorderedList {
@@ -17,9 +17,9 @@ public class UnorderedList {
 		LinkedList<String> str = new LinkedList<String>();
 		str = Utility.readFile("/home/admin1/Documents/file.txt"); // reading file
 		for (String data : str) {
-			Utility.insertLinkedList(data); // inserting into linkedlist
+			Utility.insertLinkedList(data); // inserting into linked list
 		}
-		Utility.printLinkedList(); // printing linkedlist
+		Utility.printLinkedList(); // printing linked list
 		System.out.println("Enter word to find in LinkedList: ");
 		String find = Utility.stringInput();
 		Utility.deleteByKey(find); // deleting the user input from linked list

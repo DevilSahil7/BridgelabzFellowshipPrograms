@@ -1,4 +1,4 @@
-package com.bridgelabz.fellowshipprograms.DataStructure;
+package com.bridgelabz.fellowshipprograms.datastructure;
 
 import com.bridgelabz.fellowshipprograms.utility.QueueUsingLinkedListUtility;
 import com.bridgelabz.fellowshipprograms.utility.Utility;
@@ -6,7 +6,7 @@ import com.bridgelabz.fellowshipprograms.utility.Utility;
 /**
  * purpose: to check the dates of the week using queue
  * 
- * @author sahil kudake
+ * @author Sahil Kudake
  *
  */
 public class DatesOfWeek {

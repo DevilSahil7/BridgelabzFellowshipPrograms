@@ -1,9 +1,9 @@
 package com.bridgelabz.fellowshipprograms.utility;
 
 /**
- * purpose: to perform stack operations
+ * Purpose: to perform stack operations
  * 
- * @author admin1
+ * @author Sahil Kudake
  *
  */
 public class StackUtility {

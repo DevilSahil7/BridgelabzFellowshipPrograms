@@ -1,11 +1,11 @@
-package com.bridgelabz.fellowshipprograms.AlgorithnPrograms;
+package com.bridgelabz.fellowshipprograms.algorithnprograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
  * purpose: to perform insertion sort
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class InsertionSort {

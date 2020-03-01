@@ -1,11 +1,11 @@
-package com.bridgelabz.fellowshipprograms.BasicPrograms;
+package com.bridgelabz.fellowshipprograms.basicprograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
  * purpose: to find probability if heads and tails after flipping a coin by users choice
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class FlipCoin {

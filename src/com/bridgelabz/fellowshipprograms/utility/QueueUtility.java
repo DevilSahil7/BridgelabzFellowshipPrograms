@@ -2,9 +2,9 @@ package com.bridgelabz.fellowshipprograms.utility;
 
 
 /**
- * purpose: to perform queue operations
+ * Purpose: to perform queue operations
  * 
- * @author admin1
+ * @author Sahil Kudake
  *
  */
 public class QueueUtility {

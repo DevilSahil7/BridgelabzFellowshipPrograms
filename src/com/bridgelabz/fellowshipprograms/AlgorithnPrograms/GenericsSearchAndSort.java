@@ -1,4 +1,4 @@
-package com.bridgelabz.fellowshipprograms.AlgorithnPrograms;
+package com.bridgelabz.fellowshipprograms.algorithnprograms;
 
 import java.util.ArrayList;
 
@@ -7,7 +7,7 @@ import com.bridgelabz.fellowshipprograms.utility.Utility;
 /**
  * purpose: performing sorting and searching using generics
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class GenericsSearchAndSort {

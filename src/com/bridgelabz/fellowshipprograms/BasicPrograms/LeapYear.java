@@ -1,11 +1,11 @@
-package com.bridgelabz.fellowshipprograms.BasicPrograms;
+package com.bridgelabz.fellowshipprograms.basicprograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
  * purpose: to find year is leap year or not
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class LeapYear {

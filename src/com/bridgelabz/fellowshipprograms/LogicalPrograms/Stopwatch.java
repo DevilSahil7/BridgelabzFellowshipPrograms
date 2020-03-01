@@ -1,11 +1,11 @@
-package com.bridgelabz.fellowshipprograms.LogicalPrograms;
+package com.bridgelabz.fellowshipprograms.logicalprograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
- * purpose: stopwatch program
+ * Purpose: stop watch program
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class Stopwatch {

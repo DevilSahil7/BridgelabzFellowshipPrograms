@@ -1,10 +1,16 @@
-package com.bridgelabz.fellowshipprograms.DataStructure;
+package com.bridgelabz.fellowshipprograms.datastructure;
 
 import com.bridgelabz.fellowshipprograms.utility.QueueUsingLinkedListUtility;
 import com.bridgelabz.fellowshipprograms.utility.StackUsingLinkedListUtility;
 import com.bridgelabz.fellowshipprograms.utility.StackUsingLinkedListUtility2;
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * Purpose : Display calendar using queue in two stacks
+ * 
+ * @author Sahil Kudake
+ *
+ */
 public class QueueInTwoStacks {
 
 	public static void main(String[] args) {

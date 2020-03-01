@@ -1,11 +1,11 @@
-package com.bridgelabz.fellowshipprograms.FunctionalPrograms;
+package com.bridgelabz.fellowshipprograms.functionalprograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
- * purpose: taking input for 2D array and printing it on screen
+ * Purpose: taking input for 2D array and printing it on screen
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class Matrix2D {

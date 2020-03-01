@@ -1,11 +1,11 @@
-package com.bridgelabz.fellowshipprograms.FunctionalPrograms;
+package com.bridgelabz.fellowshipprograms.functionalprograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
- * purpose: find the sum of three integers in array whose addition is 0
+ * Purpose: find the sum of three integers in array whose addition is 0
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class Triplet {

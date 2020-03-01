@@ -4,49 +4,48 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
-import com.bridgelabz.fellowshipprograms.utility.Utility.Node;
-
+/**
+ * Purpose : To perform linked list operations
+ * 
+ * @author Sahil Kudake
+ *
+ */
 public class LinkedListDemo {
 
 	static Node head;
-	static class Node
-	{
+
+	static class Node {
 		int data;
 		Node next;
-		
-		Node(int d)
-		{
-			data=d;
-			next=null;
+
+		Node(int d) {
+			data = d;
+			next = null;
 		}
 	}
-	
-	public static void insert(int data)
+
+	public static void insert(int data) // method to insert data in linked list
 	{
-		Node newNode= new Node(data);
-		newNode.next=null;
-		
-		if(head==null)
-		{
-			head=newNode;
-		}
-		else
-		{
-			Node last=head;
-			while(last.next!=null)
-			{
-				last=last.next;
+		Node newNode = new Node(data);
+		newNode.next = null;
+
+		if (head == null) {
+			head = newNode;
+		} else {
+			Node last = head;
+			while (last.next != null) {
+				last = last.next;
 			}
-			last.next=newNode;
+			last.next = newNode;
 		}
-		
+
 	}
-	
-	public static void delete(int key) throws FileNotFoundException {
+
+	public static void delete(int key) throws FileNotFoundException { // method to delete data from linked list
 		Node currentNode = head;
 		int temp = 0;
 		while (currentNode.next != null) {
-			if (currentNode.next.data== key) { // checking the user input with currentNode data
+			if (currentNode.next.data == key) { // checking the user input with currentNode data
 				currentNode.next = currentNode.next.next; // if equals then inserting data of next node into current
 															// node
 				temp++; // counting temp
@@ -62,7 +61,7 @@ public class LinkedListDemo {
 		}
 		printLinkedList();
 	}
-	
+
 	public static void printLinkedList() throws FileNotFoundException { // linkedlist to print string
 		Node currentNode = head;
 		PrintWriter pw = new PrintWriter(new File("/home/admin1/Documents/file.txt")); // giving file location to store
@@ -77,104 +76,87 @@ public class LinkedListDemo {
 		pw.flush();
 		System.out.println(currentNode.data); // displaying data
 	}
-	
-	public static void deleteByKey(int key)
+
+	public static void deleteByKey(int key) // method to delete data by key
 	{
 		Node currentNode = head;
-		Node prev= null;
-		
-		if(currentNode!=null && currentNode.data==key)
-		{
-			head=currentNode.next;
-			System.out.println(key+ " found and deleted!");
-			
+		Node prev = null;
+
+		if (currentNode != null && currentNode.data == key) {
+			head = currentNode.next;
+			System.out.println(key + " found and deleted!");
+
 		}
-		while(currentNode!=null && currentNode.data!=key)
-		{
-			prev= currentNode;
-			currentNode=currentNode.next;
+		while (currentNode != null && currentNode.data != key) {
+			prev = currentNode;
+			currentNode = currentNode.next;
 		}
-		if(currentNode!=null)
-		{
-			prev.next=currentNode.next;
-			System.out.println(key+" found and deleted!!");
+		if (currentNode != null) {
+			prev.next = currentNode.next;
+			System.out.println(key + " found and deleted!!");
 		}
-		if(currentNode==null)
-		{
-			System.out.println(key+" not found!!");
+		if (currentNode == null) {
+			System.out.println(key + " not found!!");
 		}
 	}
-	
-	public static void printList()
+
+	public static void printList() //method to print linked list
 	{
-		Node currentNode=head;
-		
-		while(currentNode!=null)
-		{
-			System.out.print(currentNode.data+"-->");
-			currentNode=currentNode.next;
+		Node currentNode = head;
+
+		while (currentNode != null) {
+			System.out.print(currentNode.data + "-->");
+			currentNode = currentNode.next;
 		}
 		System.out.println();
 	}
-	
-	public static void insertAtStart(int data)
-	{
-		Node newNode= new Node(data);
-		newNode.data=data;
-		newNode.next=null;
-		newNode.next=head;
-		head= newNode;
-		
+
+	public static void insertAtStart(int data) { //method to insert at start
+		Node newNode = new Node(data);
+		newNode.data = data;
+		newNode.next = null;
+		newNode.next = head;
+		head = newNode;
+
 	}
-	
-	public static void insertAtIndex(int index, int data)
-	{
-		Node newNode= new Node(data);
-		newNode.data=data;
-		newNode.next=null;
-		Node n=head;
-		if(index==0)
-		{
+
+	public static void insertAtIndex(int index, int data) {  //method to insert at index position
+		Node newNode = new Node(data);
+		newNode.data = data;
+		newNode.next = null;
+		Node n = head;
+		if (index == 0) {
 			insertAtStart(data);
 		}
-		for(int i=0; i<index-1; i++)
-		{
-			n=n.next;
+		for (int i = 0; i < index - 1; i++) {
+			n = n.next;
 		}
-		newNode.next=n.next;
-		n.next=newNode;
+		newNode.next = n.next;
+		n.next = newNode;
 	}
-	
-	public static void deleteAtIndex(int index)
-	{
-		Node n= head;
-		for(int i=0; i<index-1; i++)
-		{
-			n=n.next;
+
+	public static void deleteAtIndex(int index) {  //method to delete at index position
+		Node n = head;
+		for (int i = 0; i < index - 1; i++) {
+			n = n.next;
 		}
-		n.next=n.next.next;
+		n.next = n.next.next;
 	}
-	
-	public static void deleteLast()
-	{
-		Node n= head;
-		while(n.next.next!=null)
-		{
-			n=n.next;
+
+	public static void deleteLast() {  //method to delete last element
+		Node n = head;
+		while (n.next.next != null) {
+			n = n.next;
 		}
-		n.next=null;
+		n.next = null;
 	}
-	
-	public static void loop()
-	{
-		Node n=head;
-		while(n.next!=null)
-		{
-			n=n.next;
+
+	public static void loop() {  //method to detect loop
+		Node n = head;
+		while (n.next != null) {
+			n = n.next;
 		}
-		n.next=head;
+		n.next = head;
 	}
-	
-	
 
 }

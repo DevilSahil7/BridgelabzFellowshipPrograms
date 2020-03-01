@@ -1,4 +1,4 @@
-package com.bridgelabz.fellowshipprograms.DataStructure;
+package com.bridgelabz.fellowshipprograms.datastructure;
 
 import com.bridgelabz.fellowshipprograms.utility.QueueUtility;
 import com.bridgelabz.fellowshipprograms.utility.Utility;
@@ -6,7 +6,7 @@ import com.bridgelabz.fellowshipprograms.utility.Utility;
 /**
  * purpose: simulation of banking cash counter
  * 
- * @author sahil kudake
+ * @author Sahil Kudake
  *
  */
 public class BankingCashCounter {

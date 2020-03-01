@@ -1,10 +1,10 @@
 package com.bridgelabz.fellowshipprograms.utility;
 
 /**
- * purpose: to perform different operations of linked list
+ * Purpose: to perform different operations of linked list
  * 
- * @author sahil kudake
- * @param <E>
+ * @author Sahil Kudake
+ *
  *
  */
 public class LinkedListUtility<E> {

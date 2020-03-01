@@ -1,11 +1,11 @@
-package com.bridgelabz.fellowshipprograms.JUnitTesting;
+package com.bridgelabz.fellowshipprograms.junittesting;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
- * purpose: to convert temperature from C to F and F to C
+ * Purpose: to convert temperature from C to F and F to C
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class TamperatureConversion {

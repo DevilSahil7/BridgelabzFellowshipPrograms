@@ -1,9 +1,9 @@
 package com.bridgelabz.fellowshipprograms.utility;
 
 /**
- * purpose: to perform stack operations using Linked list
+ * Purpose: to perform stack operations using Linked list
  * 
- * @author admin1
+ * @author Sahil Kudake
  *
  * @param <E>
  */
@@ -30,7 +30,6 @@ public class StackUsingLinkedListUtility2 {
 				temp = temp.next;
 			}
 			temp.next = n;
-			// System.out.println(temp.data);
 		}
 	}
 

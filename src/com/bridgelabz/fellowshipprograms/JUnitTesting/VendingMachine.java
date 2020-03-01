@@ -1,11 +1,11 @@
-package com.bridgelabz.fellowshipprograms.JUnitTesting;
+package com.bridgelabz.fellowshipprograms.junittesting;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
- * purpose: fewest notes to be returned by vending machine
+ * Purpose: fewest notes to be returned by vending machine
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class VendingMachine {

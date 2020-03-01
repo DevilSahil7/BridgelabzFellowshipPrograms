@@ -1,11 +1,11 @@
-package com.bridgelabz.fellowshipprograms.DataStructure;
+package com.bridgelabz.fellowshipprograms.datastructure;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
  * purpose: to show the calendar of month
  * 
- * @author sahil kudake
+ * @author Sahil Kudake
  *
  */
 public class Calendar {

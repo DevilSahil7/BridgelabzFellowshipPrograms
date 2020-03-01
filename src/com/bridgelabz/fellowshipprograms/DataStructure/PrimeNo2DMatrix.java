@@ -1,13 +1,13 @@
-package com.bridgelabz.fellowshipprograms.DataStructure;
+package com.bridgelabz.fellowshipprograms.datastructure;
 
 import java.util.ArrayList;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
- * purpose: print prime numbers in 2D array 0-100, 100-200 range up to 1000
+ * Purpose: print prime numbers in 2D array 0-100, 100-200 range up to 1000
  * 
- * @author sahil kudake
+ * @author Sahil Kudake
  *
  */
 public class PrimeNo2DMatrix {

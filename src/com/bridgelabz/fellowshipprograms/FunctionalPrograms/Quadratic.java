@@ -1,11 +1,11 @@
-package com.bridgelabz.fellowshipprograms.FunctionalPrograms;
+package com.bridgelabz.fellowshipprograms.functionalprograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
- * purpose: to find the root of the equation
+ * Purpose: to find the root of the equation
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class Quadratic {

@@ -1,11 +1,11 @@
-package com.bridgelabz.fellowshipprograms.JUnitTesting;
+package com.bridgelabz.fellowshipprograms.junittesting;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
- * purpose: to find square root using newton's method
+ * Purpose: to find square root using newton's method
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class NewtonSqrt {

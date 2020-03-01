@@ -1,11 +1,11 @@
-package com.bridgelabz.fellowshipprograms.LogicalPrograms;
+package com.bridgelabz.fellowshipprograms.logicalprograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
- * purpose: to generate random coupon code
+ * Purpose: to generate random coupon code
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class CouponCode {

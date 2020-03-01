@@ -1,11 +1,11 @@
-package com.bridgelabz.fellowshipprograms.BasicPrograms;
+package com.bridgelabz.fellowshipprograms.basicprograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
  * purpose: to find power of 2
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class PowerOf2 {

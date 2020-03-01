@@ -1,4 +1,4 @@
-package com.bridgelabz.fellowshipprograms.DataStructure;
+package com.bridgelabz.fellowshipprograms.datastructure;
 
 import java.io.IOException;
 import java.util.LinkedList;
@@ -7,12 +7,12 @@ import com.bridgelabz.fellowshipprograms.utility.LinkedListDemo;
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
- * purpose: reading the integer file from system and making it as ordered list
+ * Purpose: reading the integer file from system and making it as ordered list
  * by sorting
  * 
  * 
  * 
- * @author sahil kudake
+ * @author Sahil Kudake
  *
  */
 public class OrderedList {

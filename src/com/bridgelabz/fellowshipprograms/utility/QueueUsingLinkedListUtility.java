@@ -2,16 +2,18 @@ package com.bridgelabz.fellowshipprograms.utility;
 
 
 /**
- * purpose: To perform queue operations using Linked list
+ * Purpose: To perform queue operations using Linked list
  * 
- * @author admin1
+ * @author Sahil Kudake
  *
  */
 public class QueueUsingLinkedListUtility {
+	@SuppressWarnings("rawtypes")
 	static Node head;
 
 	public static class Node<E> {
 		E data;
+		@SuppressWarnings("rawtypes")
 		Node next;
 
 		public Node(E data) {

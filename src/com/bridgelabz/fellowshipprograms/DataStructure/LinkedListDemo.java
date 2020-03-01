@@ -1,5 +1,12 @@
-package com.bridgelabz.fellowshipprograms.DataStructure;
+package com.bridgelabz.fellowshipprograms.datastructure;
 
+
+/**
+ * Purpose : To perform linked list operations
+ * 
+ * @author Sahil Kudake
+ *
+ */
 public class LinkedListDemo {
 
 	static Node head;

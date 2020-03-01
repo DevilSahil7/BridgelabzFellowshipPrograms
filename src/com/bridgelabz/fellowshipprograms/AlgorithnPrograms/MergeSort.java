@@ -1,9 +1,9 @@
-package com.bridgelabz.fellowshipprograms.AlgorithnPrograms;
+package com.bridgelabz.fellowshipprograms.algorithnprograms;
 
 /**
  * purpose: to perform merge sort
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class MergeSort {

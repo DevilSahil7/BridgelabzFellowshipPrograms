@@ -1,8 +1,13 @@
-package com.bridgelabz.fellowshipprograms.DataStructure;
+package com.bridgelabz.fellowshipprograms.datastructure;
 
 import com.bridgelabz.fellowshipprograms.utility.QueueUsingLinkedListUtility;
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * purpose: to check the days of the week using queue using linked list
+ * 
+ * @author Sahil Kudake
+ */
 public class DaysOfWeek {
 
 	public static void main(String[] args) {

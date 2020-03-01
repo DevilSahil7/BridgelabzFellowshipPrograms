@@ -1,11 +1,11 @@
-package com.bridgelabz.fellowshipprograms.AlgorithnPrograms;
+package com.bridgelabz.fellowshipprograms.algorithnprograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
  * purpose: to sort array
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class BubbleSort {

@@ -1,11 +1,11 @@
-package com.bridgelabz.fellowshipprograms.LogicalPrograms;
+package com.bridgelabz.fellowshipprograms.logicalprograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
- * purpose: tic tac toe game of two players
+ * Purpose: tic tac toe game of two players
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class TicTacToe {

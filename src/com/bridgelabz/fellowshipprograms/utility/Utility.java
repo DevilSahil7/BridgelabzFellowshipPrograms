@@ -662,7 +662,7 @@ public class Utility {
 //<=================================Prime Anagram==========================================>
 
 	public static int[] primeAnagram(ArrayList<Integer> al) {
-		int k = 0, a = 0;
+		int k = 0;
 		int arr[] = new int[170];
 		for (int i = 0; i < al.size(); i++) {
 			for (int j = i + 1; j < al.size(); j++) {
@@ -881,7 +881,7 @@ public class Utility {
 	 * @param exp : array of parentheses
 	 * @return : true or false
 	 */
-	public static boolean areBalanced(char exp[]) {
+	public static boolean isBalanced(char exp[]) {
 		for (int i = 0; i < exp.length; i++) {
 			if (exp[i] == '{' || exp[i] == '[' || exp[i] == '(')
 				StackUsingLinkedListUtility.push(exp[i]); // if found any opening brace then it will be pushed in stack

@@ -1,7 +1,11 @@
 package com.bridgelabz.fellowshipprograms.utility;
 
-import com.bridgelabz.fellowshipprograms.utility.StackUtility.Node;
-
+/**
+ * Purpose: to perform stack operations
+ * 
+ * @author Sahil Kudake
+ *
+ */
 public class StackUtility2 {
 	static Node top;
 

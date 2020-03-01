@@ -1,9 +1,15 @@
-package com.bridgelabz.fellowshipprograms.DataStructure;
+package com.bridgelabz.fellowshipprograms.datastructure;
 
 import java.util.ArrayList;
 import com.bridgelabz.fellowshipprograms.utility.StackUsingLinkedListUtility;
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
+/**
+ * Purpose : Printing prime anagram using stack using linked list
+ * 
+ * @author Sahil Kudake
+ *
+ */
 public class StackUsingLinkedList {
 
 	public static void main(String[] args) {

@@ -1,11 +1,11 @@
-package com.bridgelabz.fellowshipprograms.AlgorithnPrograms;
+package com.bridgelabz.fellowshipprograms.algorithnprograms;
 
 import com.bridgelabz.fellowshipprograms.utility.Utility;
 
 /**
  * purpose: guessing the user's number
  * 
- * @author sahil
+ * @author Sahil Kudake
  *
  */
 public class GuessNumber {

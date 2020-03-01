@@ -1,4 +1,4 @@
-package com.bridgelabz.fellowshipprograms.DataStructure;
+package com.bridgelabz.fellowshipprograms.datastructure;
 
 import java.io.IOException;
 import java.util.LinkedList;
@@ -9,7 +9,7 @@ import com.bridgelabz.fellowshipprograms.utility.Utility;
 /**
  * purpose: to create slot of 10 to store chain of numbers and to search a number.
  * 			and to search a number. if found then delete if not then insert.
- * @author sahil kudake
+ * @author Sahil Kudake
  *
  */
 public class Hashing {
